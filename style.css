@@ -9,16 +9,28 @@ body {
 .header-nav {
   display: flex;
   justify-content: space-between;
+  height: 90px;
+  align-items: center;
 }
 .logo {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
 }
+.ada,
+.carro {
+  font-weight: lighter;
+}
 
 .carrito {
   display: flex;
+  padding: 15px;
 }
+.carro,
+.fa-shopping-cart {
+  padding: 15px;
+}
+
 .background-foto {
   width: 100%;
   min-height: 300px;
@@ -29,6 +41,17 @@ body {
   justify-content: center;
   align-items: center;
 }
+.background-foto::before {
+  content: "";
+  display: block;
+  position: absolute;
+  min-height: 300px;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.electronica {
+  color: white;
+}
 .cuerpo {
   display: flex;
   justify-content: center;
@@ -38,6 +61,7 @@ body {
   width: 20%;
   display: flex;
   flex-direction: column;
+  margin: 5% 4% 1% 4%;
 }
 .encabezado-filtros {
   display: flex;
@@ -51,18 +75,34 @@ body {
   display: flex;
   flex-direction: column;
 }
+.mostrando {
+  margin: 15px;
+}
 .fa-star {
   color: rgb(255, 208, 0);
 }
 .header-tarjetas {
-  border-color: black;
   display: flex;
   justify-content: space-between;
+  background-color: white;
+  margin: 5% 4% 1% 4%;
 }
 .ver {
+  margin: 15px;
   display: flex;
-  justify-content: space-between;
+  flex-direction: row;
+  width: 20%;
+  justify-content: center;
+  align-content: center;
+  flex-wrap: wrap;
 }
+
+.ver-como,
+.fa-th,
+.fa-list-ul {
+  padding: 15px;
+}
+
 .seccion-tarjetas {
   border-color: black;
 }
@@ -77,6 +117,7 @@ body {
   border-color: black;
   margin: 15px;
   background-color: white;
+  padding: 25px;
 }
 .div-foto {
   width: 300px;
