@@ -1,0 +1,27 @@
+* {
+  margin: 0;
+}
+.filtros {
+  background-color: hotpink;
+  border-color: black;
+}
+.header-tarjetas {
+  background-color: salmon;
+  border-color: black;
+}
+.contenedor-tarjetas {
+  background-color: purple;
+  border-color: black;
+  width: 650px;
+  display: flex;
+}
+.seccion-tarjetas {
+  background-color: coral;
+  border-color: black;
+}
+
+.tarjeta {
+  background-color: yellow;
+  border-color: black;
+  flex: 1 1 200px;
+}
