@@ -1,27 +1,86 @@
 * {
   margin: 0;
 }
+.header-nav {
+  background-color: burlywood;
+  display: flex;
+  justify-content: space-between;
+}
+.logo {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.ada {
+}
+.carrito {
+  display: flex;
+}
+.background-foto {
+  width: 100%;
+  min-height: 300px;
+  background-image: url(img/banner.jpg);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cuerpo {
+  display: flex;
+  justify-content: center;
+}
 .filtros {
   background-color: hotpink;
   border-color: black;
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+}
+.encabezado-filtros {
+  display: flex;
+  justify-content: space-between;
+}
+.categoria {
+  display: flex;
+  flex-direction: column;
+}
+.puntaje {
+  display: flex;
+  flex-direction: column;
 }
 .header-tarjetas {
   background-color: salmon;
+  border-color: black;
+  display: flex;
+  justify-content: space-between;
+}
+.ver {
+  display: flex;
+  justify-content: space-between;
+}
+.seccion-tarjetas {
+  background-color: rgb(31, 255, 255);
   border-color: black;
 }
 .contenedor-tarjetas {
   background-color: purple;
   border-color: black;
-  width: 650px;
   display: flex;
-}
-.seccion-tarjetas {
-  background-color: coral;
-  border-color: black;
+  flex-wrap: wrap;
 }
 
 .tarjeta {
   background-color: yellow;
   border-color: black;
-  flex: 1 1 200px;
+
+  margin: 15px;
+}
+.div-foto {
+  width: 200px;
+  height: auto;
+}
+
+.producto {
+  width: 100%;
 }
