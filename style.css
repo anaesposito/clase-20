@@ -1,8 +1,12 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;700;900&display=swap");
 * {
   margin: 0;
 }
+body {
+  background-color: rgb(236, 235, 235);
+  font-family: montserrat;
+}
 .header-nav {
-  background-color: burlywood;
   display: flex;
   justify-content: space-between;
 }
@@ -11,8 +15,7 @@
   flex-wrap: wrap;
   align-items: center;
 }
-.ada {
-}
+
 .carrito {
   display: flex;
 }
@@ -31,7 +34,6 @@
   justify-content: center;
 }
 .filtros {
-  background-color: hotpink;
   border-color: black;
   width: 20%;
   display: flex;
@@ -49,8 +51,10 @@
   display: flex;
   flex-direction: column;
 }
+.fa-star {
+  color: rgb(255, 208, 0);
+}
 .header-tarjetas {
-  background-color: salmon;
   border-color: black;
   display: flex;
   justify-content: space-between;
@@ -60,25 +64,42 @@
   justify-content: space-between;
 }
 .seccion-tarjetas {
-  background-color: rgb(31, 255, 255);
   border-color: black;
 }
 .contenedor-tarjetas {
-  background-color: purple;
   border-color: black;
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .tarjeta {
-  background-color: yellow;
   border-color: black;
-
   margin: 15px;
+  background-color: white;
 }
 .div-foto {
-  width: 200px;
+  width: 300px;
   height: auto;
+}
+.div-espec {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.comprar {
+  background-color: rgb(226, 223, 223);
+  border: none;
+  border-radius: 14px;
+  color: black;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
 }
 
 .producto {
