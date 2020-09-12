@@ -18,7 +18,8 @@
         <h2 class="ada">Ada Shop</h2>
       </div>
       <div class="carrito">
-        <i class="fas fa-shopping-cart"></i>
+        <a id="ocultar-carrito" href="#"><i class="fas fa-shopping-cart"></i></a>
+        
         <p class="carro">Carrito<span> 0 </span> items</p>
       </div>
     </div>
@@ -26,29 +27,51 @@
     <div class="background-foto">
       <h1 class="electronica">ELECTRONICA</h1>
     </div>
+    <!-- ACA EMPIEZA EL FANTASTICO MENU CARRITO OVERLAY-->
+    
+<section id="carrito" class="ocultar overlay">
+  <div id="overlay">
+    <h5>Carrito</h5>
+    <p><span>0</span>producto(s) agregados(s)</p>
+    <div>contenido</div>
+    <p>Subtotal</p>
+    <button>Comprar</button>
+    <button>Vaciar</button>
+  </div>
+
+</section>
+
     <!--Cuerpo principal seccion
-con dos divs, uno de filtro y otro de tarjetas-->
+con dos divs, uno de filtro y otro de tarjetas
+!!!!!!!!!!!!!CONTROLAR LOS NOMBRES DE CLASES Y DIVS!!!!!!!!!!!!!-->
     <section class="cuerpo">
       <div class="filtros">
         <div class="encabezado-filtros">
           <h2>Filtros</h2>
           <div class="limpiar">
-            <p>Limpiar <i class="fas fa-trash-alt"></i></p>
+            <button id="limpiar">Limpiar <i class="fas fa-trash-alt"></i></button> 
           </div>
         </div>
         <div class="b-c-p">
           <h2>Busqueda</h2>
-          <div class="categoria">
+          <input placeholder="Ingresa tu búsqueda aquí" id="busqueda" type="search">
+          <div class="categoria">            
             <h2>Categoria</h2>
-            <label for="Consolas">Consolas</label>
-            <label for="Notebooks">Notebooks</label>
-            <label for="Camaras">Camaras</label>
-            <label for="Celulares">Celulares</label>
-            <label for="Accesorios">Accesorios</label>
+            
+            <form action="">
+            <label for="Consolas"> <input type="checkbox" name="consolas" id="consolasId" class="check" />  Consolas </label>
+
+            <label for="Notebooks"> <input type="checkbox" class="check" />  Notebooks</label>
+            <label for="Camaras"> <input type="checkbox" class="check" />  Camaras</label>
+            <label for="Celulares"> <input type="checkbox"  class="check"/>  Celulares</label>
+            <label for="Accesorios"> <input type="checkbox" class="check" />
+               Accesorios</label
+            >
           </div>
           <div class="puntaje">
             <h2>Puntaje</h2>
-            <label for="5">
+            <label for="5-estrellas">
+              <input type="checkbox" name="cinco-estrellas" value="5stars" id="5-estrellas" class="check" />
               <i class="fas fa-star"></i>
               <i class="fas fa-star"></i>
               <i class="fas fa-star"></i>
@@ -56,7 +79,8 @@ con dos divs, uno de filtro y otro de tarjetas-->
               <i class="fas fa-star"></i>
               (5)</label
             >
-            <label for="4">
+            <label for="4-estrellas">
+              <input type="checkbox" name="cuatro-estrellas" value="4stars" id="4-estrellas" class="check" />
               <i class="fas fa-star"></i>
               <i class="fas fa-star"></i>
               <i class="fas fa-star"></i>
@@ -64,7 +88,9 @@ con dos divs, uno de filtro y otro de tarjetas-->
               <i class="far fa-star"></i>
               (4)</label
             >
-            <label for="3">
+            <label for="3-estrellas">
+              <input type="checkbox" name="tres-estrellas" value="3stars"
+              id="3-estrellas" class="check" />
               <i class="fas fa-star"></i>
               <i class="fas fa-star"></i>
               <i class="fas fa-star"></i>
@@ -72,7 +98,8 @@ con dos divs, uno de filtro y otro de tarjetas-->
               <i class="far fa-star"></i>
               (3)</label
             >
-            <label for="2">
+            <label for="2-estrellas">
+              <input type="checkbox" name="dos-estrellas" value="2stars" id="2-estrellas" class="check" />
               <i class="fas fa-star"></i>
               <i class="fas fa-star"></i>
               <i class="far fa-star"></i>
@@ -81,7 +108,8 @@ con dos divs, uno de filtro y otro de tarjetas-->
               (2)</label
             >
 
-            <label for="1">
+            <label for="1-estrella">
+              <input type="checkbox" name="una-estrella" value="1star" id="1-estrella" class="check" />
               <i class="fas fa-star"></i>
               <i class="far fa-star"></i>
               <i class="far fa-star"></i>
@@ -93,12 +121,12 @@ con dos divs, uno de filtro y otro de tarjetas-->
           </div>
         </div>
       </div>
-
+    </form>
       <div class="seccion-tarjetas">
         <div class="header-tarjetas">
           <div>
             <p class="mostrando">
-              Mostrando<span> 0 </span>producto(s) de <span> 0 </span>
+              Mostrando<span class="nro-mostrado"> 0 </span>producto(s) de <span class="total-nros"> 0 </span>
             </p>
           </div>
           <div class="ver">
@@ -107,6 +135,7 @@ con dos divs, uno de filtro y otro de tarjetas-->
             <i class="fas fa-list-ul"></i>
           </div>
         </div>
+        <!-- usar ARTICLES en vez de tarjetas y usar ASIDE para los filtros-->
         <div class="contenedor-tarjetas">
           <article class="tarjeta">
             <div class="div-foto">
@@ -213,5 +242,6 @@ con dos divs, uno de filtro y otro de tarjetas-->
         </div>
       </div>
     </section>
+    <script src="index.js"></script>
   </body>
 </html>

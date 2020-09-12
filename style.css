@@ -6,6 +6,35 @@ body {
   background-color: rgb(236, 235, 235);
   font-family: montserrat;
 }
+button {
+  background-color: rgb (236, 235, 235);
+  border: none;
+  color: black;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+}
+.overlay {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(199, 199, 199, 0.267);
+  position: absolute;
+  top: 0;
+}
+
+#overlay {
+  height: 100vh;
+  width: 200px;
+  background-color: white;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.ocultar {
+  display: none;
+}
 .header-nav {
   display: flex;
   justify-content: space-between;
@@ -30,6 +59,17 @@ body {
 .fa-shopping-cart {
   padding: 15px;
 }
+.categoria,
+.puntaje {
+  margin: 16px 0 16px;
+}
+.check {
+  margin-right: 10px;
+}
+form {
+  display: flex;
+  flex-direction: column;
+}
 
 .background-foto {
   width: 100%;
@@ -51,6 +91,7 @@ body {
 }
 .electronica {
   color: white;
+  z-index: 1;
 }
 .cuerpo {
   display: flex;
