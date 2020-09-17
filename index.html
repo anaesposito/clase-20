@@ -1,247 +1,252 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <link rel="stylesheet" href="style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
-    />
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ada Shop</title>
-  </head>
-  <body>
-    <!--Nav header inicia aca-->
-    <div class="header-nav">
-      <div class="logo">
-        <img src="img/ada.svg" alt="" />
-        <h2 class="ada">Ada Shop</h2>
-      </div>
-      <div class="carrito">
-        <a id="ocultar-carrito" href="#"><i class="fas fa-shopping-cart"></i></a>
-        
-        <p class="carro">Carrito<span> 0 </span> items</p>
-      </div>
+
+<head>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ada Shop</title>
+</head>
+
+<body>
+  <!--Inicio Nav header -->
+  <div class="header-nav">
+    <div class="logo">
+      <img src="img/ada.svg" alt="" />
+      <h2 class="titulo-logo">Ada Shop</h2>
     </div>
-    <!-- Header background foto aca-->
-    <div class="background-foto">
-      <h1 class="electronica">ELECTRONICA</h1>
+    <div class="carrito">
+      <a id="ocultar-carrito" href="#"><i class="fas fa-shopping-cart"></i></a>
+
+      <p class="carro">Carrito<span> 0 </span> items</p>
     </div>
-    <!-- ACA EMPIEZA EL FANTASTICO MENU CARRITO OVERLAY-->
-    
-<section id="carrito" class="ocultar overlay">
-  <div id="overlay">
-    <h5>Carrito</h5>
-    <p><span>0</span>producto(s) agregados(s)</p>
-    <div>contenido</div>
-    <p>Subtotal</p>
-    <button>Comprar</button>
-    <button>Vaciar</button>
   </div>
+  <!-- Inicio header background foto -->
+  <div class="background-foto">
+    <h1 class="electronica">ELECTRONICA</h1>
+  </div>
+  <!-- Inicio Carrito Overlay-->
 
-</section>
+  <section id="carrito" class="ocultar overlay">
+    <div id="overlay">
+      <button id="cerrar">X</button>
+      <h2 class="titulo-menu-carrito">Carrito</h2>
+      <p><span>0</span>producto(s) agregados(s)</p>
+      <div>contenido</div>
+      <p>Subtotal</p>
+      <button>Comprar</button>
+      <button>Vaciar</button>
+    </div>
 
-    <!--Cuerpo principal seccion
+  </section>
+
+  <!--Cuerpo principal seccion
 con dos divs, uno de filtro y otro de tarjetas
 !!!!!!!!!!!!!CONTROLAR LOS NOMBRES DE CLASES Y DIVS!!!!!!!!!!!!!-->
-    <section class="cuerpo">
-      <div class="filtros">
-        <div class="encabezado-filtros">
-          <h2>Filtros</h2>
-          <div class="limpiar">
-            <button id="limpiar">Limpiar <i class="fas fa-trash-alt"></i></button> 
-          </div>
-        </div>
-        <div class="b-c-p">
-          <h2>Busqueda</h2>
-          <input placeholder="Ingresa tu búsqueda aquí" id="busqueda" type="search">
-          <div class="categoria">            
-            <h2>Categoria</h2>
-            
-            <form action="">
-            <label for="Consolas"> <input type="checkbox" name="consolas" id="consolasId" class="check" />  Consolas </label>
-
-            <label for="Notebooks"> <input type="checkbox" class="check" />  Notebooks</label>
-            <label for="Camaras"> <input type="checkbox" class="check" />  Camaras</label>
-            <label for="Celulares"> <input type="checkbox"  class="check"/>  Celulares</label>
-            <label for="Accesorios"> <input type="checkbox" class="check" />
-               Accesorios</label
-            >
-          </div>
-          <div class="puntaje">
-            <h2>Puntaje</h2>
-            <label for="5-estrellas">
-              <input type="checkbox" name="cinco-estrellas" value="5stars" id="5-estrellas" class="check" />
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              (5)</label
-            >
-            <label for="4-estrellas">
-              <input type="checkbox" name="cuatro-estrellas" value="4stars" id="4-estrellas" class="check" />
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="far fa-star"></i>
-              (4)</label
-            >
-            <label for="3-estrellas">
-              <input type="checkbox" name="tres-estrellas" value="3stars"
-              id="3-estrellas" class="check" />
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="far fa-star"></i>
-              <i class="far fa-star"></i>
-              (3)</label
-            >
-            <label for="2-estrellas">
-              <input type="checkbox" name="dos-estrellas" value="2stars" id="2-estrellas" class="check" />
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="far fa-star"></i>
-              <i class="far fa-star"></i>
-              <i class="far fa-star"></i>
-              (2)</label
-            >
-
-            <label for="1-estrella">
-              <input type="checkbox" name="una-estrella" value="1star" id="1-estrella" class="check" />
-              <i class="fas fa-star"></i>
-              <i class="far fa-star"></i>
-              <i class="far fa-star"></i>
-              <i class="far fa-star"></i>
-              <i class="far fa-star"></i>
-
-              (1)</label
-            >
-          </div>
+  <section class="cuerpo">
+    <!--Inicio Filtros de Busqueda-->
+    <aside class="filtros">
+      <div class="encabezado-filtros">
+        <h2>Filtros</h2>
+        <div class="limpiar">
+          <button id="limpiar">Limpiar <i class="fas fa-trash-alt"></i></button>
         </div>
       </div>
+      <div class="container-busqueda">
+        <h3>Busqueda</h3>
+        <input placeholder="Ingresa tu búsqueda" id="busqueda" class="busqueda" type="text">
+        <i class="fas fa-search"></i>
+      </div>
+      <div class="categoria">
+        <!--Inicio Filtro Categoria de Productos-->
+        <h3>Categoria</h3>
+        <form action="">
+          <label for="Consolas"> <input type="checkbox" name="consolas" id="consolasId" class="check" /> Consolas
+          </label>
+          <label for="Notebooks"> <input type="checkbox" class="check" /> Notebooks</label>
+          <label for="Camaras"> <input type="checkbox" class="check" /> Camaras</label>
+          <label for="Celulares"> <input type="checkbox" class="check" /> Celulares</label>
+          <label for="Accesorios"> <input type="checkbox" class="check" />
+            Accesorios</label>
+      </div>
+      <!--Inicio Filtro Puntaje de Productos-->
+      <div class="puntaje">
+        <h3>Puntaje</h3>
+        <label for="5-estrellas">
+          <input type="checkbox" name="cinco-estrellas" value="5stars" id="5-estrellas" class="check" />
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          (5)</label>
+        <label for="4-estrellas">
+          <input type="checkbox" name="cuatro-estrellas" value="4stars" id="4-estrellas" class="check" />
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="far fa-star"></i>
+          (4)</label>
+        <label for="3-estrellas">
+          <input type="checkbox" name="tres-estrellas" value="3stars" id="3-estrellas" class="check" />
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="far fa-star"></i>
+          <i class="far fa-star"></i>
+          (3)</label>
+        <label for="2-estrellas">
+          <input type="checkbox" name="dos-estrellas" value="2stars" id="2-estrellas" class="check" />
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="far fa-star"></i>
+          <i class="far fa-star"></i>
+          <i class="far fa-star"></i>
+          (2)</label>
+
+        <label for="1-estrella">
+          <input type="checkbox" name="una-estrella" value="1star" id="1-estrella" class="check" />
+          <i class="fas fa-star"></i>
+          <i class="far fa-star"></i>
+          <i class="far fa-star"></i>
+          <i class="far fa-star"></i>
+          <i class="far fa-star"></i>
+
+          (1)</label>
+      </div>
+      </div>
+      </div>
+    </aside>
     </form>
-      <div class="seccion-tarjetas">
-        <div class="header-tarjetas">
-          <div>
-            <p class="mostrando">
-              Mostrando<span class="nro-mostrado"> 0 </span>producto(s) de <span class="total-nros"> 0 </span>
-            </p>
-          </div>
-          <div class="ver">
-            <h3 class="ver-como">Ver Como</h3>
-            <i class="fas fa-th"></i>
-            <i class="fas fa-list-ul"></i>
-          </div>
+    <!--Inicio seccion productos-->
+    <div class="seccion-tarjetas">
+      <div class="header-tarjetas">
+        <div>
+          <p class="mostrando">
+            Mostrando<span class="nro-mostrado"> 0 </span>producto(s) de <span class="total-nros"> 0 </span>
+          </p>
         </div>
-        <!-- usar ARTICLES en vez de tarjetas y usar ASIDE para los filtros-->
-        <div class="contenedor-tarjetas">
-          <article class="tarjeta">
-            <div class="div-foto">
-              <img class="producto" src="img/objeto1.jpg" alt="" />
-            </div>
-            <div class="div-espec">
-              <h3>Celular</h3>
-              <p>$2245</p>
-              <span>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="far fa-star"></i>
-              </span>
-              <button class="comprar">Comprar</button>
-            </div>
-          </article>
-          <article class="tarjeta">
-            <div class="div-foto">
-              <img class="producto" src="img/objeto1.jpg" alt="" />
-            </div>
-            <div class="div-espec">
-              <h3>Celular</h3>
-              <p>$2245</p>
-              <span>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="far fa-star"></i>
-              </span>
-              <button class="comprar">Comprar</button>
-            </div>
-          </article>
-          <article class="tarjeta">
-            <div class="div-foto">
-              <img class="producto" src="img/objeto1.jpg" alt="" />
-            </div>
-            <div class="div-espec">
-              <h3>Celular</h3>
-              <p>$2245</p>
-              <span>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="far fa-star"></i>
-              </span>
-              <button class="comprar">Comprar</button>
-            </div>
-          </article>
-          <article class="tarjeta">
-            <div class="div-foto">
-              <img class="producto" src="img/objeto1.jpg" alt="" />
-            </div>
-            <div class="div-espec">
-              <h3>Celular</h3>
-              <p>$2245</p>
-              <span>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="far fa-star"></i>
-              </span>
-              <button class="comprar">Comprar</button>
-            </div>
-          </article>
-          <article class="tarjeta">
-            <div class="div-foto">
-              <img class="producto" src="img/objeto1.jpg" alt="" />
-            </div>
-            <div class="div-espec">
-              <h3>Celular</h3>
-              <p>$2245</p>
-              <span>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="far fa-star"></i>
-              </span>
-              <button class="comprar">Comprar</button>
-            </div>
-          </article>
-          <article class="tarjeta">
-            <div class="div-foto">
-              <img class="producto" src="img/objeto1.jpg" alt="" />
-            </div>
-            <div class="div-espec">
-              <h3>Celular</h3>
-              <p>$2245</p>
-              <span>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="far fa-star"></i>
-              </span>
-              <button class="comprar">Comprar</button>
-            </div>
-          </article>
+        <div class="ver">
+          <h3 class="ver-como">Ver Como</h3>
+          <i class="fas fa-th"></i>
+          <i class="fas fa-list-ul"></i>
         </div>
       </div>
-    </section>
-    <script src="index.js"></script>
-  </body>
+      <!-- Inicio Sección Tarjetas-->
+      <div class="contenedor-tarjetas">
+        <article class="tarjeta" data-nombre="consola-nintendo-switch" data-rating="1" data-precio="37699"
+          data-categoria="consolas">
+          <div class="div-foto">
+            <img class="producto" src="img/objeto6.jpg" alt="" />
+          </div>
+          <div class="div-especificaciones">
+            <h3>Consola Nintendo Switch</h3>
+            <p>$37699</p>
+            <span>
+              <i class="fas fa-star"></i>
+              <i class="far fa-star"></i>
+              <i class="far fa-star"></i>
+              <i class="far fa-star"></i>
+              <i class="far fa-star"></i>
+            </span>
+            <button class="comprar">Comprar</button>
+          </div>
+        </article>
+        <article class="tarjeta" data-nombre="auriculares-sony" data-rating="1" data-precio="2355"
+          data-categoria="accesorios">
+          <div class="div-foto">
+            <img class="producto" src="img/objeto5.png" alt="" />
+          </div>
+          <div class="div-especificaciones">
+            <h3>Auriculares Sony</h3>
+            <p>$2355</p>
+            <span>
+              <i class="fas fa-star"></i>
+              <i class="far fa-star"></i>
+              <i class="far fa-star"></i>
+              <i class="far fa-star"></i>
+              <i class="far fa-star"></i>
+            </span>
+            <button class="comprar">Comprar</button>
+          </div>
+        </article>
+        <article class="tarjeta" data-nombre="celular" data-rating="4" data-precio="2245" data-categoria="celulares">
+          <div class="div-foto">
+            <img class="producto" src="img/objeto1.jpg" alt="" />
+          </div>
+          <div class="div-especificaciones">
+            <h3>Celular</h3>
+            <p>$2245</p>
+            <span>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="far fa-star"></i>
+            </span>
+            <button class="comprar">Comprar</button>
+          </div>
+        </article>
+        <article class="tarjeta" data-nombre="play-station-4" data-rating="5" data-precio="59999"
+          data-categoria="consolas">
+          <div class="div-foto">
+            <img class="producto" src="img/objeto2.jpg" alt="" />
+          </div>
+          <div class="div-especificaciones">
+            <h3>Play Station 4</h3>
+            <p>$59999</p>
+            <span>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </span>
+            <button class="comprar">Comprar</button>
+          </div>
+        </article>
+        <article class="tarjeta" data-nombre="camara-nikon" data-rating="5" data-precio="82999"
+          data-categoria="camaras">
+          <div class="div-foto">
+            <img class="producto" src="img/objeto3.jpg" alt="" />
+          </div>
+          <div class="div-especificaciones">
+            <h3>Cámara Nikon</h3>
+            <p>$82999</p>
+            <span>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </span>
+            <button class="comprar">Comprar</button>
+          </div>
+        </article>
+        <article class="tarjeta" data-nombre="notebook-asus" data-rating="3" data-precio="125999"
+          data-categoria="notebook">
+          <div class="div-foto">
+            <img class="producto" src="img/objeto4.png" alt="" />
+          </div>
+          <div class="div-especificaciones">
+            <h3>Notebook Asus</h3>
+            <p>$125999</p>
+            <span>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="far fa-star"></i>
+              <i class="far fa-star"></i>
+            </span>
+            <button class="comprar">Comprar</button>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+  <script src="index.js"></script>
+</body>
+
 </html>

@@ -16,25 +16,38 @@ button {
   font-size: 16px;
   cursor: pointer;
 }
+.ocultar {
+  display: none;
+}
+/*Aqui comienza menu carrito OVERLAY*/
 .overlay {
   width: 100vw;
   height: 100vh;
-  background-color: rgba(199, 199, 199, 0.267);
+  background-color: rgba(199, 199, 199, 0.513);
   position: absolute;
   top: 0;
 }
 
 #overlay {
   height: 100vh;
-  width: 200px;
+  width: 400px;
   background-color: white;
   position: absolute;
   top: 0;
-  right: 0;
+  right: 0px;
 }
-.ocultar {
-  display: none;
+
+.titulo-menu-carrito {
+  padding: 15px;
 }
+#cerrar {
+  width: 30px;
+  position: absolute;
+  top: 0;
+  right: 20px;
+  margin: 15px;
+}
+/*Barra de Navegacion*/
 .header-nav {
   display: flex;
   justify-content: space-between;
@@ -45,24 +58,55 @@ button {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  padding: 40px;
+  margin: 60px;
 }
-.ada,
-.carro {
-  font-weight: lighter;
+
+.titulo-logo {
+  padding-left: 20px;
+  font-weight: 400;
 }
 
 .carrito {
   display: flex;
-  padding: 15px;
+  padding: 40px;
+  margin: 60px;
 }
 .carro,
 .fa-shopping-cart {
   padding: 15px;
 }
-.categoria,
-.puntaje {
-  margin: 16px 0 16px;
+/*Aqui comienzan Filtros de busqueda */
+
+#limpiar {
+  padding-top: 4px;
 }
+
+.encabezado-filtros {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+.fa-search {
+  position: relative;
+  top: 0;
+  right: 22px;
+}
+.busqueda {
+  border: 0;
+  border-bottom: 2px solid gray;
+  font-size: 14px;
+  color: black;
+  padding: 7px 0;
+  background: transparent;
+  transition: border-color 0.2s;
+}
+.categoria,
+.puntaje,
+.busqueda {
+  margin: 20px 0 20px;
+}
+
 .check {
   margin-right: 10px;
 }
@@ -104,10 +148,7 @@ form {
   flex-direction: column;
   margin: 5% 4% 1% 4%;
 }
-.encabezado-filtros {
-  display: flex;
-  justify-content: space-between;
-}
+
 .categoria {
   display: flex;
   flex-direction: column;
@@ -143,7 +184,7 @@ form {
 .fa-list-ul {
   padding: 15px;
 }
-
+/* Seccion Tarjetas*/
 .seccion-tarjetas {
   border-color: black;
 }
@@ -158,13 +199,17 @@ form {
   border-color: black;
   margin: 15px;
   background-color: white;
-  padding: 25px;
+  padding: 75px;
+  /*si pongo 4.3% queda igual que 75px*/
 }
 .div-foto {
   width: 300px;
-  height: auto;
+  height: 300px;
 }
-.div-espec {
+.producto {
+  width: 100%;
+}
+.div-especificaciones {
   text-align: center;
   display: flex;
   justify-content: center;
@@ -182,8 +227,4 @@ form {
   font-size: 16px;
   margin: 4px 2px;
   cursor: pointer;
-}
-
-.producto {
-  width: 100%;
 }
