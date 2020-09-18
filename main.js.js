@@ -50,3 +50,13 @@ busqueda.oninput = () => {
     }
   }
 };
+
+// //EMPIEZA OVERLAY PRODUCTOS
+
+// const productos = document.querySelectorAll(".producto");
+
+// for (let producto of productos) {
+//   producto.onmouseover = () => {
+//     producto.classList.toggle("overlay-producto");
+//   };
+// }

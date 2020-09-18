@@ -200,21 +200,39 @@ form {
   margin: 15px;
   background-color: white;
   padding: 75px;
+
   /*si pongo 4.3% queda igual que 75px*/
 }
 .div-foto {
   width: 300px;
   height: 300px;
+  overflow: hidden;
+  position: relative;
 }
+
 .producto {
   width: 100%;
+  transition: 1s;
+  position: absolute;
 }
+.producto:hover {
+  transform: scale(1.5);
+  position: absolute;
+  top: 0;
+}
+
 .div-especificaciones {
   text-align: center;
   display: flex;
   justify-content: center;
   flex-direction: column;
 }
+.titulo-producto,
+.precio-producto,
+.rating-producto {
+  padding-bottom: 20px;
+}
+
 .comprar {
   background-color: rgb(226, 223, 223);
   border: none;
