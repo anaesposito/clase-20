@@ -18,7 +18,7 @@
       <h2 class="titulo-logo">Ada Shop</h2>
     </div>
     <div class="carrito">
-      <a id="ocultar-carrito" href="#"><i class="fas fa-shopping-cart"></i></a>
+      <a id="click-carrito" href="#"><i class="fas fa-shopping-cart"></i></a>
 
       <p class="carro">Carrito<span> 0 </span> items</p>
     </div>
@@ -29,23 +29,95 @@
   </div>
   <!-- Inicio Carrito Overlay-->
 
-  <section id="carrito" class="ocultar overlay">
-    <div id="overlay">
-      <button id="cerrar">X</button>
-      <h2 class="titulo-menu-carrito">Carrito</h2>
+  <section id="carrito" class="hidden carrito-aside">
+
+    <button id="cerrar"><i class="fas fa-times-circle"></i></button>
+    <h2 class="titulo-menu-carrito">Carrito</h2>
+    <div class="cuerpo-carrito">
       <p><span>0</span>producto(s) agregados(s)</p>
       <div>contenido</div>
       <p>Subtotal</p>
-      <button>Comprar</button>
-      <button>Vaciar</button>
     </div>
+    <footer class="contenedor-botones-carrito">
+      <button class="boton-comprar-carrito" id="comprar-carrito"><a href="
+          #checkout-overlay">Comprar</a></button>
+      <button class="boton-vaciar-carrito" id="vaciar-carrito">Vaciar</button>
+    </footer>
 
   </section>
+  <div class="overlay ocultar"></div>
 
-  <!--Cuerpo principal seccion
-con dos divs, uno de filtro y otro de tarjetas
-!!!!!!!!!!!!!CONTROLAR LOS NOMBRES DE CLASES Y DIVS!!!!!!!!!!!!!-->
-  <section class="cuerpo">
+  <!--Inicio Producto en Carrito-->
+
+  <!--Inicio Checkout Carrito-->
+  <section class="checkout ocultar-checkout">
+    <form action="">
+      <div class="titulo-checkout" id="checkout-overlay">
+        <h1>Checkout</h1>
+      </div>
+      <div class="contenedor-checkout">
+        <div class="contenedor-columnas">
+          <div class="contenedor-datos-personales">
+            <h5>Datos Personales</h5>
+            <label class="datos-personales" for="">
+              Nombre y Apellido
+              <input class="campos-datos-personales" type="text" placeholder="Ingrese su nombre aquí"
+                name="Nombre y Apellido" />
+            </label>
+            <label class="datos-personales" for="">
+              Email
+              <input class="campos-datos-personales" type="email" placeholder="Ingrese su Email"
+                name="Direccion de Email" id="" />
+            </label>
+          </div>
+
+          <div class="contenedor-metodos-de-pago">
+            <h5>Opciones de Pago</h5>
+            <label class="metodos-de-pago" for="">
+              <input type="radio" name="metodo-de-pago" value="efectivo-debito" />
+              Efectivo/Debito
+            </label>
+            <label class="metodos-de-pago" for="">
+              <input type="radio" name="metodo-de-pago" value="tarjeta-credito" />
+              Tarjeta de Credito
+            </label>
+            <label class="metodos-de-pago" for="">
+              <input type="checkbox" name="envio" />
+              Lo quiero con Envio
+            </label>
+            <label class="metodos-de-pago" for="">
+              <input type="checkbox" name="descuento" />
+              Tarjeta de Credito
+            </label>
+          </div>
+          <br>
+
+          <div class="contenedor-importes">
+            <h5>Resumen</h5>
+            <p class="subtotal-texto">
+              Subtotal <span class="subtotal-importe">0</span>
+            </p>
+            <p class="descuento-texto">
+              Descuento del 10% <span class="descuento-importe">0</span>
+            </p>
+            <p class="envio-texto">
+              Envio <span class="envio-importe">0</span>
+            </p>
+            <p class="total-texto">Total: <span>0</span></p>
+          </div>
+        </div>
+      </div>
+      <footer class="footer-checkout">
+        <button class="botones-checkout" id="seguir-comprando-checkout">Seguir Comprando</button>
+        <button class="botones-checkout" id="finalizar-compra-checkout">Finalizar</button>
+      </footer>
+    </form>
+  </section>
+  <!--Final Checkout Carrito-->
+
+
+  <!--Inicio Seccion Principal-->
+  <section class="main">
     <!--Inicio Filtros de Busqueda-->
     <aside class="filtros">
       <div class="encabezado-filtros">
@@ -59,10 +131,11 @@ con dos divs, uno de filtro y otro de tarjetas
         <input placeholder="Ingresa tu búsqueda" id="busqueda" class="busqueda" type="text">
         <i class="fas fa-search"></i>
       </div>
+
+      <!--Inicio Filtro Categoria de Productos-->
       <div class="categoria">
-        <!--Inicio Filtro Categoria de Productos-->
         <h3>Categoria</h3>
-        <form action="">
+        <form class="form-filtros" action="">
           <label for="Consolas"> <input type="checkbox" name="consolas" id="consolasId" class="check" /> Consolas
           </label>
           <label for="Notebooks"> <input type="checkbox" class="check" /> Notebooks</label>
@@ -75,7 +148,7 @@ con dos divs, uno de filtro y otro de tarjetas
       <div class="puntaje">
         <h3>Puntaje</h3>
         <label for="5-estrellas">
-          <input type="checkbox" name="cinco-estrellas" value="5stars" id="5-estrellas" class="check" />
+          <input type="checkbox" name="cinco-estrellas" value="5" id="5-estrellas" class="check" />
           <i class="fas fa-star"></i>
           <i class="fas fa-star"></i>
           <i class="fas fa-star"></i>
@@ -83,7 +156,7 @@ con dos divs, uno de filtro y otro de tarjetas
           <i class="fas fa-star"></i>
           (5)</label>
         <label for="4-estrellas">
-          <input type="checkbox" name="cuatro-estrellas" value="4stars" id="4-estrellas" class="check" />
+          <input type="checkbox" name="cuatro-estrellas" value="4" id="4-estrellas" class="check" />
           <i class="fas fa-star"></i>
           <i class="fas fa-star"></i>
           <i class="fas fa-star"></i>
@@ -91,7 +164,7 @@ con dos divs, uno de filtro y otro de tarjetas
           <i class="far fa-star"></i>
           (4)</label>
         <label for="3-estrellas">
-          <input type="checkbox" name="tres-estrellas" value="3stars" id="3-estrellas" class="check" />
+          <input type="checkbox" name="tres-estrellas" value="3" id="3-estrellas" class="check" />
           <i class="fas fa-star"></i>
           <i class="fas fa-star"></i>
           <i class="fas fa-star"></i>
@@ -99,7 +172,7 @@ con dos divs, uno de filtro y otro de tarjetas
           <i class="far fa-star"></i>
           (3)</label>
         <label for="2-estrellas">
-          <input type="checkbox" name="dos-estrellas" value="2stars" id="2-estrellas" class="check" />
+          <input type="checkbox" name="dos-estrellas" value="2" id="2-estrellas" class="check" />
           <i class="fas fa-star"></i>
           <i class="fas fa-star"></i>
           <i class="far fa-star"></i>
@@ -108,7 +181,7 @@ con dos divs, uno de filtro y otro de tarjetas
           (2)</label>
 
         <label for="1-estrella">
-          <input type="checkbox" name="una-estrella" value="1star" id="1-estrella" class="check" />
+          <input type="checkbox" name="una-estrella" value="1" id="1-estrella" class="check" />
           <i class="fas fa-star"></i>
           <i class="far fa-star"></i>
           <i class="far fa-star"></i>
@@ -152,7 +225,7 @@ con dos divs, uno de filtro y otro de tarjetas
               <i class="far fa-star"></i>
               <i class="far fa-star"></i>
             </span>
-            <button class="comprar">Comprar</button>
+            <button data-nombre="consola-nintendo-switch" class="comprar">Comprar</button>
           </div>
         </article>
         <article class="tarjeta" data-nombre="auriculares-sony" data-rating="1" data-precio="2355"
@@ -170,7 +243,7 @@ con dos divs, uno de filtro y otro de tarjetas
               <i class="far fa-star"></i>
               <i class="far fa-star"></i>
             </span>
-            <button class="comprar">Comprar</button>
+            <button data-nombre="auriculares-sony" class="comprar">Comprar</button>
           </div>
         </article>
         <article class="tarjeta" data-nombre="celular" data-rating="4" data-precio="2245" data-categoria="celulares">
@@ -187,7 +260,7 @@ con dos divs, uno de filtro y otro de tarjetas
               <i class="fas fa-star"></i>
               <i class="far fa-star"></i>
             </span>
-            <button class="comprar">Comprar</button>
+            <button data-nombre="celular" class="comprar">Comprar</button>
           </div>
         </article>
         <article class="tarjeta" data-nombre="play-station-4" data-rating="5" data-precio="59999"
@@ -205,7 +278,7 @@ con dos divs, uno de filtro y otro de tarjetas
               <i class="fas fa-star"></i>
               <i class="fas fa-star"></i>
             </span>
-            <button class="comprar">Comprar</button>
+            <button data-nombre="play-station-4" class="comprar">Comprar</button>
           </div>
         </article>
         <article class="tarjeta" data-nombre="camara-nikon" data-rating="5" data-precio="82999"
@@ -223,7 +296,7 @@ con dos divs, uno de filtro y otro de tarjetas
               <i class="fas fa-star"></i>
               <i class="fas fa-star"></i>
             </span>
-            <button class="comprar">Comprar</button>
+            <button data-nombre="camara-nikon" class="comprar">Comprar</button>
           </div>
         </article>
         <article class="tarjeta" data-nombre="notebook-asus" data-rating="3" data-precio="125999"
@@ -241,13 +314,13 @@ con dos divs, uno de filtro y otro de tarjetas
               <i class="far fa-star"></i>
               <i class="far fa-star"></i>
             </span>
-            <button class="comprar">Comprar</button>
+            <button data-nombre="notebook-asus" class="comprar">Comprar</button>
           </div>
         </article>
       </div>
     </div>
   </section>
-  <script src="index.js"></script>
+  <script src="main.js"></script>
 </body>
 
 </html>
