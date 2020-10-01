@@ -1,10 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;700;900&display=swap");
 * {
   margin: 0;
+  box-sizing: border-box;
+  position: relative;
 }
 body {
   background-color: rgb(236, 235, 235);
   font-family: montserrat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 button {
   border: none;
@@ -18,6 +23,12 @@ button {
   display: none;
 }
 
+h2 {
+  font-size: 20px;
+}
+h3 {
+  font-size: 15px;
+}
 /*Barra de Navegacion*/
 .header-nav {
   display: flex;
@@ -25,7 +36,7 @@ button {
   height: 90px;
   align-items: center;
 }
-.logo {
+.container-header-logo {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -181,7 +192,11 @@ button {
 
 #limpiar {
   padding-top: 4px;
+  font-size: 15px;
   background: rgb(236, 235, 235);
+}
+.fa-trash-alt {
+  margin-right: 5px;
 }
 
 .encabezado-filtros {
@@ -189,10 +204,14 @@ button {
   justify-content: space-between;
   margin-bottom: 15px;
 }
+
 .fa-search {
-  position: relative;
-  top: 0;
-  right: 22px;
+  position: absolute;
+  right: 16px;
+  top: 10%;
+}
+.container-busqueda {
+  margin-top: 20px;
 }
 .busqueda {
   border: 0;
@@ -201,7 +220,6 @@ button {
   color: black;
   padding: 7px 0;
   background: transparent;
-  transition: border-color 0.2s;
 }
 .categoria,
 .puntaje,
@@ -239,16 +257,15 @@ button {
   color: white;
   z-index: 1;
 }
+
 .main {
   display: flex;
   justify-content: center;
 }
 .filtros {
-  border-color: black;
-  width: 20%;
   display: flex;
   flex-direction: column;
-  margin: 5% 4% 1% 4%;
+  margin: 5% 1% 1% 20%;
 }
 
 .categoria {
@@ -262,14 +279,20 @@ button {
 .mostrando {
   margin: 15px;
 }
+
 .fa-star {
   color: rgb(255, 208, 0);
 }
 .header-tarjetas {
+  background: #fff;
   display: flex;
+  margin: 23px;
   justify-content: space-between;
-  background-color: white;
-  margin: 5% 4% 1% 4%;
+  align-items: center;
+  background-color: #fff;
+  padding: 25px 30px;
+  font-size: 14px;
+  margin-top: 6%;
 }
 .ver {
   margin: 15px;
@@ -288,22 +311,25 @@ button {
 }
 /* Seccion Tarjetas*/
 .seccion-tarjetas {
-  border-color: black;
+  display: flex;
+  flex-direction: column;
 }
 .contenedor-tarjetas {
-  border-color: black;
   display: flex;
   flex-wrap: wrap;
+
   justify-content: center;
 }
 
 .tarjeta {
-  border-color: black;
-  margin: 15px;
+  width: 31%;
+  margin: 1%;
   background-color: white;
-  padding: 75px;
-
-  /*si pongo 4.3% queda igual que 75px*/
+  padding: 70px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .div-foto {
   width: 300px;
@@ -352,4 +378,69 @@ button {
 .boton-comprar-carrito > a {
   text-decoration: none;
   color: black;
+}
+/* Aca comienza footer Main */
+.main-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.logo-firma-footer {
+  font-size: 14px;
+  background: #fff;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 40px 10px 30px;
+  margin-top: 80px;
+}
+
+.logo-footer {
+  width: 20px;
+  margin-right: 20px;
+}
+
+.fab {
+  padding: 4px;
+}
+
+.dos {
+  position: relative;
+  display: inline-block;
+  font-size: 40px;
+  font-weight: 800;
+  color: white;
+  overflow: hidden;
+  background: linear-gradient(to right, white, white 50%, #ff2873 50%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 200% 100%;
+  background-position: 100%;
+  transition: background-position 275ms ease;
+  text-decoration: none;
+}
+.dos:hover {
+  background-position: 0 100%;
+}
+.redes {
+  color: white;
+  font-size: 45px;
+  margin: 20px;
+}
+
+.link-footer {
+  text-decoration: none;
+  color: white;
+}
+.link-footer {
+  font-weight: bold;
+}
+
+.fa-heart {
+  font-size: 14px;
+  color: #fafafa;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 30px;
 }

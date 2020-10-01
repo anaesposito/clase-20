@@ -2,6 +2,7 @@
 <html lang="es">
 
 <head>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/konpa/devicon@master/devicon.min.css">
   <link rel="stylesheet" href="style.css" />
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" />
@@ -11,26 +12,29 @@
 </head>
 
 <body>
-  <!--Inicio Nav header -->
+  <!-----------------------------------------Inicio Nav header ------------------------------------->
   <div class="header-nav">
-    <div class="logo">
+    <div class="container-header-logo">
       <img src="img/ada.svg" alt="" />
       <h2 class="titulo-logo">Ada Shop</h2>
     </div>
     <div class="carrito">
       <a id="click-carrito" href="#"><i class="fas fa-shopping-cart"></i></a>
-
       <p class="carro">Carrito<span> 0 </span> items</p>
     </div>
   </div>
-  <!-- Inicio header background foto -->
+  <!------------------------------------- Fin Nav Header ------------------------------------->
+
+  <!------------------------------------- Inicio Header Background Foto ------------------------------------->
   <div class="background-foto">
     <h1 class="electronica">ELECTRONICA</h1>
   </div>
-  <!-- Inicio Carrito Overlay-->
+  <!------------------------------------- Fin Header Background Foto ------------------------------------->
 
+
+
+  <!------------------------------------- Inicio Carrito Overlay------------------------------------->
   <section id="carrito" class="hidden carrito-aside">
-
     <button id="cerrar"><i class="fas fa-times-circle"></i></button>
     <h2 class="titulo-menu-carrito">Carrito</h2>
     <div class="cuerpo-carrito">
@@ -46,10 +50,13 @@
 
   </section>
   <div class="overlay ocultar"></div>
+  <!------------------------------------- Fin Carrito Overlay ------------------------------------->
 
-  <!--Inicio Producto en Carrito-->
 
-  <!--Inicio Checkout Carrito-->
+  <!-------------------------------------Inicio Producto en Carrito------------------------------------->
+  <!------------------------------------- Fin Producto en Carrito ------------------------------------->
+
+  <!-------------------------------------Inicio Checkout Carrito------------------------------------->
   <section class="checkout ocultar-checkout">
     <form action="">
       <div class="titulo-checkout" id="checkout-overlay">
@@ -90,7 +97,6 @@
               Tarjeta de Credito
             </label>
           </div>
-          <br>
 
           <div class="contenedor-importes">
             <h5>Resumen</h5>
@@ -113,26 +119,29 @@
       </footer>
     </form>
   </section>
-  <!--Final Checkout Carrito-->
+  <!-------------------------------------Final Checkout Carrito------------------------------------->
 
 
-  <!--Inicio Seccion Principal-->
+  <!-------------------------------------Inicio Seccion Principal------------------------------------->
   <section class="main">
-    <!--Inicio Filtros de Busqueda-->
+    <!-------------------------------------Inicio Filtros de Busqueda------------------------------------->
     <aside class="filtros">
       <div class="encabezado-filtros">
         <h2>Filtros</h2>
         <div class="limpiar">
-          <button id="limpiar">Limpiar <i class="fas fa-trash-alt"></i></button>
+          <button id="limpiar"><i class="fas fa-trash-alt"></i>Limpiar </button>
         </div>
       </div>
       <div class="container-busqueda">
-        <h3>Busqueda</h3>
-        <input placeholder="Ingresa tu búsqueda" id="busqueda" class="busqueda" type="text">
-        <i class="fas fa-search"></i>
+        <h3>Búsqueda</h3>
+        <label class="contenedor-input-busqueda" for="" aria-label="Búsqueda">
+          <input placeholder="Ingresa tu búsqueda" id="busqueda" class="busqueda" type="text">
+          <i class="fas fa-search"></i>
+        </label>
       </div>
+      <!-- ---------------------------------------Fin Filtros de Busqueda --------------------------------------------->
 
-      <!--Inicio Filtro Categoria de Productos-->
+      <!-----------------------------------------Inicio Filtro Categoria de Productos------------------------------------->
       <div class="categoria">
         <h3>Categoria</h3>
         <form class="form-filtros" action="">
@@ -144,7 +153,9 @@
           <label for="Accesorios"> <input type="checkbox" class="check" />
             Accesorios</label>
       </div>
-      <!--Inicio Filtro Puntaje de Productos-->
+      <!-----------------------------------------Fin Filtro Categoria de Productos------------------------------------>
+
+      <!----------------------------------------Inicio Filtro Puntaje de Productos------------------------------------------>
       <div class="puntaje">
         <h3>Puntaje</h3>
         <label for="5-estrellas">
@@ -190,13 +201,15 @@
 
           (1)</label>
       </div>
+      <!---------------------------------------- Filtro Puntaje de Productos---------------------------------------->
       </div>
       </div>
+      </form>
     </aside>
-    </form>
-    <!--Inicio seccion productos-->
+
+    <!---------------------------------------------Inicio seccion productos---------------------------------->
     <div class="seccion-tarjetas">
-      <div class="header-tarjetas">
+      <header class="header-tarjetas">
         <div>
           <p class="mostrando">
             Mostrando<span class="nro-mostrado"> 0 </span>producto(s) de <span class="total-nros"> 0 </span>
@@ -207,7 +220,7 @@
           <i class="fas fa-th"></i>
           <i class="fas fa-list-ul"></i>
         </div>
-      </div>
+      </header>
       <!-- Inicio Sección Tarjetas-->
       <div class="contenedor-tarjetas">
         <article class="tarjeta" data-nombre="consola-nintendo-switch" data-rating="1" data-precio="37699"
@@ -317,9 +330,135 @@
             <button data-nombre="notebook-asus" class="comprar">Comprar</button>
           </div>
         </article>
+        <article class="tarjeta" data-nombre="notebook-msi" data-rating="5" data-precio="215099"
+          data-categoria="notebook">
+          <div class="div-foto">
+            <img class="producto" src="img/objeto-7.png" alt="notebook msi" />
+          </div>
+          <div class="div-especificaciones">
+            <h3 class="titulo-producto">Notebook Msi</h3>
+            <p class="precio-producto">$215099</p>
+            <span class="rating-producto">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </span>
+            <button data-nombre="notebook-msi" class="comprar">Comprar</button>
+          </div>
+        </article>
+        <article class="tarjeta" data-nombre="auriculares-philips" data-rating="5" data-precio="2159"
+          data-categoria="accesorios">
+          <div class="div-foto">
+            <img class="producto" src="img/objeto8.png" alt="auriculares philips" />
+          </div>
+          <div class="div-especificaciones">
+            <h3 class="titulo-producto">Auriculares Philips</h3>
+            <p class="precio-producto">$2159</p>
+            <span class="rating-producto">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </span>
+            <button data-nombre="auriculares-philips" class="comprar">Comprar</button>
+          </div>
+        </article>
+        <article class="tarjeta" data-nombre="macbook" data-rating="5" data-precio="249000" data-categoria="notebook">
+          <div class="div-foto">
+            <img class="producto" src="img/objeto9.png" alt="macbook" />
+          </div>
+          <div class="div-especificaciones">
+            <h3 class="titulo-producto">Macbook</h3>
+            <p class="precio-producto">$249000</p>
+            <span class="rating-producto">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </span>
+            <button data-nombre="macbook" class="comprar">Comprar</button>
+          </div>
+        </article>
+        <article class="tarjeta" data-nombre="iphone" data-rating="5" data-precio="75000" data-categoria="celulares">
+          <div class="div-foto">
+            <img class="producto" src="img/objeto10.jpeg" alt="iphone" />
+          </div>
+          <div class="div-especificaciones">
+            <h3 class="titulo-producto">Iphone</h3>
+            <p class="precio-producto">$75000</p>
+            <span class="rating-producto">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </span>
+            <button data-nombre="iphone" class="comprar">Comprar</button>
+          </div>
+        </article>
+        <article class="tarjeta" data-nombre="xbox-one" data-rating="4" data-precio="95000" data-categoria="consolas">
+          <div class="div-foto">
+            <img class="producto" src="img/objeto11.jpg" alt="xbox one" />
+          </div>
+          <div class="div-especificaciones">
+            <h3 class="titulo-producto">Xbox One</h3>
+            <p class="precio-producto">$95000</p>
+            <span class="rating-producto">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="far fa-star"></i>
+            </span>
+            <button data-nombre="xbox-one" class="comprar">Comprar</button>
+          </div>
+        </article>
+        <article class="tarjeta" data-nombre="mouse-gamer" data-rating="4" data-precio="900"
+          data-categoria="accesorios">
+          <div class="div-foto">
+            <img class="producto" src="img/objeto12.jpg" alt="mouse gamer" />
+          </div>
+          <div class="div-especificaciones">
+            <h3 class="titulo-producto">Mouse Gamer</h3>
+            <p class="precio-producto">$900</p>
+            <span class="rating-producto">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="far fa-star"></i>
+            </span>
+            <button data-nombre="mouse-gamer" class="comprar">Comprar</button>
+          </div>
+        </article>
+
       </div>
     </div>
   </section>
+   <!--------------------------------------------Fin Seccion Productos---------------------------------------->
+
+      <!---------------------------------------- Inicio Footer---------------------------------------->
+  <footer class="main-footer">
+    <div class="logo-firma-footer">
+      <img class="logo-footer" src="img/ada.svg" alt="logo ada shop">
+      <p class="firma-footer">ADA SHOP - Gracias por
+        visitarnos</p>
+    </div>
+
+    <div class="end-menu-footer"><i class="fas fa-heart"></i></div>
+    <p> Hecho por Ana Esposito</p>
+    <div class="redes">
+      <a href="https://www.linkedin.com/in/ana-esposito-5a875184/" class="link-footer dos">
+        <i class="fab devicon-linkedin-plain"></i></a>
+      <a href="https://wa.link/m7p5ed" class="link-footer dos"><i class="fab fa-whatsapp"></i></a>
+      <a href="https://github.com/anaesposito" class="link-footer dos"><i class="fab devicon-github-plain"></i></a>
+    </div>
+  </footer>
+        <!---------------------------------------- Fin Footer---------------------------------------->
   <script src="main.js"></script>
 </body>
 
