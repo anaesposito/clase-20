@@ -27,27 +27,36 @@ h2 {
 h3 {
   font-size: 15px;
 }
+
+p {
+  font-size: 1em;
+}
 .ocultar {
   display: none;
 }
 /*.......................Barra de Navegacion.............................*/
 
+.container-header-logo {
+  display: flex;
+  padding: 40px;
+  margin: 60px;
+}
+
+.container-header-logo > img {
+  width: 25px;
+}
 .header-nav {
   display: flex;
   justify-content: space-between;
   height: 90px;
   align-items: center;
-}
-.container-header-logo {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  padding: 40px;
-  margin: 60px;
+  width: 100%;
+  max-width: 1650px;
 }
 
 .titulo-logo {
   padding-left: 20px;
+
   font-weight: 400;
 }
 
@@ -137,6 +146,10 @@ h3 {
   background: rgb(67, 184, 67);
   color: white;
 }
+.boton-comprar-carrito > a {
+  text-decoration: none;
+  color: black;
+}
 #comprar-carrito > a {
   color: white;
 }
@@ -221,13 +234,14 @@ h3 {
 .main {
   display: flex;
   justify-content: center;
+  padding: 0 200px;
 }
 
 /*.......................................Filtros de Busqueda.............................*/
 .filtros {
   display: flex;
   flex-direction: column;
-  margin: 5% 1% 1% 20%;
+  margin: 6% 1% 1% 0%;
 }
 .encabezado-filtros {
   display: flex;
@@ -237,6 +251,7 @@ h3 {
 
 #limpiar {
   padding-top: 4px;
+  padding-left: 6px;
   font-size: 15px;
   background: rgb(236, 235, 235);
 }
@@ -259,6 +274,9 @@ h3 {
 .busqueda {
   margin: 20px 0 20px;
 }
+.nombre-categorias {
+  font-size: 14px;
+}
 
 .fa-search {
   position: absolute;
@@ -275,6 +293,10 @@ h3 {
 .form-filtros {
   display: flex;
   flex-direction: column;
+  margin-top: 15px;
+}
+.titulo-puntaje {
+  margin-bottom: 15px;
 }
 
 .check-filtro-categoria,
@@ -288,7 +310,37 @@ h3 {
   flex-direction: column;
 }
 /*.......................................Seccion Productos........................*/
-/* Seccion Tarjetas*/
+.header-tarjetas {
+  background: #fff;
+  display: flex;
+  margin: 23px;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  padding: 25px 30px;
+  font-size: 14px;
+  margin-top: 6%;
+}
+
+.mostrando-cantidad-de-productos {
+  margin: 15px;
+}
+.ver {
+  margin: 15px;
+  display: flex;
+  flex-direction: row;
+  width: 20%;
+  justify-content: center;
+  align-content: center;
+  flex-wrap: wrap;
+}
+
+.ver-como,
+.fa-th,
+.fa-list-ul {
+  padding: 15px;
+}
+
 .seccion-tarjetas {
   display: flex;
   flex-direction: column;
@@ -296,7 +348,6 @@ h3 {
 .contenedor-tarjetas {
   display: flex;
   flex-wrap: wrap;
-
   justify-content: center;
 }
 
@@ -341,56 +392,27 @@ h3 {
 .boton-comprar-carrito,
 .boton-vaciar-carrito,
 .botones-checkout {
-  background-color: rgb(226, 223, 223);
+  background-color: rgba(221, 217, 217, 0.212);
   border: none;
-  border-radius: 14px;
-  color: black;
+  border-radius: 10px;
+  color: rgb(37, 36, 36);
   padding: 15px 32px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 19px;
   margin: 4px 2px;
   cursor: pointer;
 }
-
-.boton-comprar-carrito > a {
-  text-decoration: none;
-  color: black;
+.comprar {
+  width: 250px;
+  transition-duration: 0.4s;
 }
-
-.mostrando-cantidad-de-productos {
-  margin: 15px;
+.comprar:hover {
+  background-color: rgb(185, 184, 184);
 }
 
 .fa-star {
   color: rgb(255, 208, 0);
-}
-.header-tarjetas {
-  background: #fff;
-  display: flex;
-  margin: 23px;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #fff;
-  padding: 25px 30px;
-  font-size: 14px;
-  margin-top: 6%;
-}
-.ver {
-  margin: 15px;
-  display: flex;
-  flex-direction: row;
-  width: 20%;
-  justify-content: center;
-  align-content: center;
-  flex-wrap: wrap;
-}
-
-.ver-como,
-.fa-th,
-.fa-list-ul {
-  padding: 15px;
 }
 
 /* Aca comienza footer Main */
@@ -398,6 +420,7 @@ h3 {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
 }
 .logo-firma-footer {
   font-size: 14px;
@@ -438,7 +461,6 @@ h3 {
   background-position: 0 100%;
 }
 .redes {
-  color: white;
   font-size: 45px;
   margin: 20px;
 }
