@@ -97,19 +97,6 @@ p {
 
 /*.......................................... Carrito Overlay.......................................*/
 
-.carrito-aside {
-  transform: translateX(0);
-  height: 100vh;
-  width: 25%;
-  background-color: white;
-  position: fixed;
-  top: 0;
-  right: 0px;
-  transition: 2s;
-}
-.hidden {
-  transform: translateX(2000px);
-}
 #cerrar-carrito {
   background: white;
   position: absolute;
@@ -121,7 +108,20 @@ p {
   text-decoration: none;
   font-size: 16px;
   cursor: pointer;
+  z-index: 1;
 }
+.carrito-aside {
+  transform: translateX(0);
+  height: 100vh;
+  width: 25%;
+  background-color: white;
+  position: fixed;
+  top: 0;
+  right: 0px;
+  transition: 2s;
+  z-index: 2;
+}
+
 .fa-times-circle {
   font-size: 24px;
 }
@@ -166,6 +166,9 @@ p {
   position: fixed;
   top: 0;
 }
+.hidden {
+  transform: translateX(2000px);
+}
 /* ...................................Checkout Carrito....................................... */
 
 .checkout {
@@ -176,6 +179,7 @@ p {
   position: fixed;
   background-color: white;
   transition: 2s;
+  z-index: 3;
 }
 .ocultar-checkout {
   transform: translateY(-1000px);
@@ -212,7 +216,6 @@ p {
   height: 40px;
   margin: 50px;
   vertical-align: middle;
-  text-align: center;
 }
 
 #finalizar-compra-checkout {
@@ -224,6 +227,7 @@ p {
 #seguir-comprando-checkout {
   width: 250px;
   vertical-align: middle;
+  display: table-cell;
 }
 .footer-checkout {
   display: flex;
@@ -242,6 +246,7 @@ p {
   display: flex;
   flex-direction: column;
   margin: 6% 1% 1% 0%;
+  width: 70%;
 }
 .encabezado-filtros {
   display: flex;

@@ -17,8 +17,9 @@ limpiar.onclick = () => {
 
 //empieza ocultar carrito//
 const clickCarrito = document.querySelector("#click-carrito");
-const botonCerrarCarrito = document.querySelector("#cerrar");
+const botonCerrarCarrito = document.querySelector("#cerrar-carrito");
 const asideCarrito = document.querySelector("#carrito");
+console.log(botonCerrarCarrito);
 
 clickCarrito.onclick = () => {
   asideCarrito.classList.remove("hidden");
@@ -27,8 +28,6 @@ clickCarrito.onclick = () => {
 botonCerrarCarrito.onclick = () => {
   asideCarrito.classList.add("hidden");
 };
-
-// LISTO CARRITO APARECE Y DESAPRECE CON ESPACIO
 
 // LISTO FILTRO DE BUSQUEDA
 const tarjetas = document.getElementsByClassName("tarjeta");
