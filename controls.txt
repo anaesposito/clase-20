@@ -1,0 +1,6 @@
+//////////////////////////// CONTROLES /////////////////////
+
+
+////1- Controlar formato de formularios, labels, checks, radios,etc
+////2-le agregas la clase producto agregado y despues un for con los q tengan la clase agreado para carrito producto agregado
+///3- CAMBIAR NOMBRE DIV-ESPECIFICACIONES a los productos en main

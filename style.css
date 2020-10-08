@@ -8,9 +8,9 @@
 body {
   background-color: rgb(236, 235, 235);
   font-family: montserrat;
-  display: flex;
+  /* display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: center; */
 }
 button {
   border: none;
@@ -27,7 +27,9 @@ h2 {
 h3 {
   font-size: 15px;
 }
-
+h5 {
+  font-size: 19px;
+}
 p {
   font-size: 1em;
 }
@@ -155,7 +157,7 @@ p {
 }
 #vaciar-carrito {
   background: white;
-  border: 2px solid red;
+  border: 1px solid red;
   color: red;
 }
 
@@ -180,6 +182,25 @@ p {
   background-color: white;
   transition: 2s;
   z-index: 3;
+  padding: 20px;
+}
+
+.contenedor-flex {
+  display: flex;
+  flex-direction: row;
+}
+.resumen-checkout {
+  min-width: 300px;
+  background: #f5f5f5;
+  border-radius: 5px;
+  padding: 20px;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.formulario-checkout {
+  width: 70%;
 }
 .ocultar-checkout {
   transform: translateY(-1000px);
@@ -193,27 +214,62 @@ p {
 .contenedor-datos-personales {
   display: flex;
   flex-direction: column;
-  margin: 50px;
+  margin-left: 50px;
 }
 .datos-personales,
 .contenedor-metodos-de-pago,
 .contenedor-importes {
   display: flex;
   flex-direction: column;
-  margin: 30px;
-  margin-left: 50px;
+  margin: 30px 0 10px;
   justify-content: center;
 }
-
+.contenedor-metodos-de-pago {
+  border-top: 1px solid #e0e0e0;
+  margin-left: 50px;
+  max-width: 390px;
+}
 .campos-datos-personales {
   width: 200px;
+  margin: 20px 5px 0px;
   outline: none;
   border: 0;
   border-bottom: 1px solid grey;
 }
+.titulo-opciones-de-pago-checkout {
+  margin: 30px 0 10px;
+}
+
+.metodos-de-pago {
+  margin: 10px;
+  font-size: 14px;
+}
+.subtotal-checkout,
+.descuento-checkout,
+.envio-checkout,
+.recargo-checkout {
+  font-weight: 500;
+  margin: 0;
+  line-height: 1.8;
+  display: flex;
+  justify-content: space-between;
+}
+
+.descuento-checkout {
+  color: green;
+}
+.recargo-checkout {
+  color: red;
+}
+.total-checkout {
+  font-size: 28px;
+  font-weight: 800;
+  margin-top: 15px;
+}
+
 .botones-checkout {
   width: 200px;
-  height: 40px;
+  height: 50px;
   margin: 50px;
   vertical-align: middle;
 }
@@ -221,18 +277,20 @@ p {
 #finalizar-compra-checkout {
   background: rgb(67, 184, 67);
   color: white;
+  margin-left: 30px;
 }
 
 #finalizar-compra-checkout,
 #seguir-comprando-checkout {
   width: 250px;
-  vertical-align: middle;
-  display: table-cell;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .footer-checkout {
   display: flex;
-  justify-content: end;
-  margin-bottom: 60px;
+  justify-content: flex-end;
+  margin: 40px 0 60px;
 }
 /*.......................................Seccion Principal...............................*/
 .main {
