@@ -4,3 +4,28 @@
 ////1- Controlar formato de formularios, labels, checks, radios,etc
 ////2-le agregas la clase producto agregado y despues un for con los q tengan la clase agreado para carrito producto agregado
 ///3- CAMBIAR NOMBRE DIV-ESPECIFICACIONES a los productos en main
+------4 - fijarme q las imagenes se adapten al tamaño
+-----5-fijate q male mando los tamaños de responsive
+
+
+
+
+
+////////////////////// P R O B L E M A S //////////
+
+-Imagenes de producto no se achican
+
+
+
+
+
+
+/////////////////////////// media query///////////
+.ver{
+    min-width: 20%;
+
+}
+
+.header-tarjetas{
+        justify-content: center;
+}

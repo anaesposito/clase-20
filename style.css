@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cookie&display=swap");
 /*..............................Generales...................*/
 * {
   margin: 0;
@@ -53,7 +54,6 @@ p {
   height: 90px;
   align-items: center;
   width: 100%;
-  max-width: 1650px;
 }
 
 .titulo-logo {
@@ -372,7 +372,7 @@ p {
   display: flex;
   flex-direction: column;
 }
-/*.......................................Seccion Productos........................*/
+/*.......................................Seccion Productos.........................*/
 .header-tarjetas {
   background: #fff;
   display: flex;
@@ -383,6 +383,11 @@ p {
   padding: 25px 30px;
   font-size: 14px;
   margin-top: 6%;
+  /* responsive */
+  flex-wrap: wrap;
+  max-height: 120px;
+  min-width: 400px;
+  align-content: center;
 }
 
 .mostrando-cantidad-de-productos {
@@ -424,16 +429,19 @@ p {
   justify-content: center;
   align-items: center;
 }
-.div-foto {
-  width: 300px;
-  height: 300px;
-  overflow: hidden;
-}
 
 .producto {
   width: 100%;
   transition: 1s;
 }
+.div-foto {
+  width: 300px;
+  height: 300px;
+  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .producto:hover {
   transform: scale(1.5);
   top: 0;
@@ -444,6 +452,7 @@ p {
   display: flex;
   justify-content: center;
   flex-direction: column;
+  margin-top: 20px;
 }
 .titulo-producto,
 .precio-producto,
@@ -504,7 +513,7 @@ p {
   padding: 4px;
 }
 
-.dos {
+#link-footer {
   position: relative;
   display: inline-block;
   font-size: 40px;
@@ -520,26 +529,21 @@ p {
   transition: background-position 275ms ease;
   text-decoration: none;
 }
-.dos:hover {
+#link-footer:hover {
   background-position: 0 100%;
 }
 .redes {
   font-size: 45px;
   margin: 20px;
 }
-
-.link-footer {
-  text-decoration: none;
-  color: white;
+.firma-personal-footer {
+  font-family: cookie;
+  font-size: 25px;
 }
-.link-footer {
-  font-weight: bold;
-}
-
 .fa-heart {
   font-size: 14px;
   color: #fafafa;
   text-align: center;
-  margin-top: 10px;
+  margin-top: 30px;
   margin-bottom: 30px;
 }
