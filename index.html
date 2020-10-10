@@ -49,7 +49,16 @@
     </footer>
 
   </section>
+  <section class="hidden vaciar-carrito-section">
+    <h1>Estás por vaciar el carrito, ¿quieres continuar?</h1>
+    <footer class="botones-vaciar-carrito-footer">
+      <button class="boton-cancelar-vaciar-carrito">Cancelar</button>
+      <button class="boton-vaciar-carrito-confirmacion">Vaciar</button>
+    </footer>
+  </section>
   <div class="overlay ocultar"></div>
+
+
   <!------------------------------------- Fin Carrito Overlay ------------------------------------->
 
 
@@ -152,9 +161,9 @@
           <i class="fas fa-search"></i>
         </label>
       </div>
-      <!-- ---------------------------------------Fin Filtros de Busqueda --------------------------------------------->
+      <!-- --------------------------------------------Fin Filtros de Busqueda ---------------------------------------------->
 
-      <!-----------------------------------------Inicio Filtro Categoria de Productos------------------------------------->
+      <!------------------------------------------Inicio Filtro Categoria de Productos--------------------------------------->
       <div class="categoria">
         <h3>Categoria</h3>
         <form class="form-filtros" action="">
@@ -170,9 +179,9 @@
           <label class="nombre-categorias" for="Accesorios"> <input type="checkbox" class="check-filtro-categoria" />
             Accesorios</label>
       </div>
-      <!-----------------------------------------Fin Filtro Categoria de Productos------------------------------------>
+      <!-----------------------------------------------Fin Filtro Categoria de Productos------------------------------------->
 
-      <!----------------------------------------Inicio Filtro Puntaje de Productos------------------------------------------>
+      <!--------------------------------------------Inicio Filtro Puntaje de Productos--------------------------------------->
       <div class="contenedor-filtro-puntaje">
         <h3 class="titulo-puntaje">Puntaje</h3>
         <label for="5-estrellas">
@@ -218,13 +227,13 @@
 
           (1)</label>
       </div>
-      <!---------------------------------------- Filtro Puntaje de Productos---------------------------------------->
+      <!------------------------------------------------- Fin Filtro Puntaje de Productos------------------------------------>
       </div>
       </div>
       </form>
     </aside>
 
-    <!-------------------------------------------------Inicio Seccion Productos-------------------------------------->
+    <!------------------------------------------------------Inicio Seccion Productos----------------------------------------->
     <div class="seccion-tarjetas">
       <header class="header-tarjetas">
         <div>
@@ -233,21 +242,26 @@
           </p>
         </div>
         <div class="ver">
-          <h3 class="ver-como">Ver Como</h3>
-          <i class="fas fa-th"></i>
-          <i class="fas fa-list-ul"></i>
+          <p class="ver-como">Ver Como</p>
+          <button id="vista-grilla"><i class="fas fa-th"></i></button>
+          <button id="vista-lista"><i class="fas fa-list-ul"></i></button>
         </div>
       </header>
       <!-------------------------------------------Inicio Sección Tarjetas------------------------------------------->
       <div class="contenedor-tarjetas">
-        <article class="tarjeta" data-nombre="consola-nintendo-switch" data-rating="1" data-precio="37699"
-          data-categoria="consolas">
+        <article id="tarjeta-producto" class="tarjeta" data-nombre="consola-nintendo-switch" data-rating="1"
+          data-precio="37699" data-categoria="consolas">
           <div class="div-foto">
             <img class="producto" src="img/objeto6.jpg" alt="" />
           </div>
           <div class="div-especificaciones">
             <h3 class="titulo-producto">Consola Nintendo Switch</h3>
             <p class="precio-producto">$37699</p>
+            <p id="descripcion-producto-vista-lista" class="vista-normal"> Lorem ipsum dolor sit amet consectetur
+              adipisicing
+              elit.
+              Quia et iste natus? Aliquam provident aspernatur eius commodi
+              et quis sapiente tenetur illo laborum ex maiores, illum officiis vero vitae quasi! </p>
             <span class="rating-producto">
               <i class="fas fa-star"></i>
               <i class="far fa-star"></i>
@@ -258,7 +272,7 @@
             <button data-nombre="consola-nintendo-switch" class="comprar">Comprar</button>
           </div>
         </article>
-        <article class="tarjeta" data-nombre="auriculares-sony" data-rating="1" data-precio="2355"
+        <article id="tarjeta-producto" class="tarjeta" data-nombre="auriculares-sony" data-rating="1" data-precio="2355"
           data-categoria="accesorios">
           <div class="div-foto">
             <img class="producto" src="img/objeto5.png" alt="" />
@@ -266,6 +280,11 @@
           <div class="div-especificaciones">
             <h3 class="titulo-producto">Auriculares Sony</h3>
             <p class="precio-producto">$2355</p>
+            <p id="descripcion-producto-vista-lista" class="vista-normal"> Lorem ipsum dolor sit amet consectetur
+              adipisicing
+              elit.
+              Quia et iste natus? Aliquam provident aspernatur eius commodi
+              et quis sapiente tenetur illo laborum ex maiores, illum officiis vero vitae quasi! </p>
             <span class="rating-producto">
               <i class="fas fa-star"></i>
               <i class="far fa-star"></i>
@@ -276,13 +295,19 @@
             <button data-nombre="auriculares-sony" class="comprar">Comprar</button>
           </div>
         </article>
-        <article class="tarjeta" data-nombre="celular" data-rating="4" data-precio="2245" data-categoria="celulares">
+        <article id="tarjeta-producto" class="tarjeta" data-nombre="celular" data-rating="4" data-precio="2245"
+          data-categoria="celulares">
           <div class="div-foto">
             <img class="producto" src="img/objeto1.jpg" alt="" />
           </div>
           <div class="div-especificaciones">
             <h3 class="titulo-producto">Celular</h3>
             <p class="precio-producto">$2245</p>
+            <p id="descripcion-producto-vista-lista" class="vista-normal"> Lorem ipsum dolor sit amet consectetur
+              adipisicing
+              elit.
+              Quia et iste natus? Aliquam provident aspernatur eius commodi
+              et quis sapiente tenetur illo laborum ex maiores, illum officiis vero vitae quasi! </p>
             <span class="rating-producto">
               <i class="fas fa-star"></i>
               <i class="fas fa-star"></i>
@@ -293,7 +318,7 @@
             <button data-nombre="celular" class="comprar">Comprar</button>
           </div>
         </article>
-        <article class="tarjeta" data-nombre="play-station-4" data-rating="5" data-precio="59999"
+        <article id="tarjeta-producto" class="tarjeta" data-nombre="play-station-4" data-rating="5" data-precio="59999"
           data-categoria="consolas">
           <div class="div-foto">
             <img class="producto" src="img/objeto2.jpg" alt="" />
@@ -301,6 +326,11 @@
           <div class="div-especificaciones">
             <h3 class="titulo-producto">Play Station 4</h3>
             <p class="precio-producto">$59999</p>
+            <p id="descripcion-producto-vista-lista" class="vista-normal"> Lorem ipsum dolor sit amet consectetur
+              adipisicing
+              elit.
+              Quia et iste natus? Aliquam provident aspernatur eius commodi
+              et quis sapiente tenetur illo laborum ex maiores, illum officiis vero vitae quasi! </p>
             <span class="rating-producto">
               <i class="fas fa-star"></i>
               <i class="fas fa-star"></i>
@@ -311,7 +341,7 @@
             <button data-nombre="play-station-4" class="comprar">Comprar</button>
           </div>
         </article>
-        <article class="tarjeta" data-nombre="camara-nikon" data-rating="5" data-precio="82999"
+        <article id="tarjeta-producto" class="tarjeta" data-nombre="camara-nikon" data-rating="5" data-precio="82999"
           data-categoria="camaras">
           <div class="div-foto">
             <img class="producto" src="img/objeto3.jpg" alt="" />
@@ -319,6 +349,11 @@
           <div class="div-especificaciones">
             <h3 class="titulo-producto">Cámara Nikon</h3>
             <p class="precio-producto">$82999</p>
+            <p id="descripcion-producto-vista-lista" class="vista-normal"> Lorem ipsum dolor sit amet consectetur
+              adipisicing
+              elit.
+              Quia et iste natus? Aliquam provident aspernatur eius commodi
+              et quis sapiente tenetur illo laborum ex maiores, illum officiis vero vitae quasi! </p>
             <span class="rating-producto">
               <i class="fas fa-star"></i>
               <i class="fas fa-star"></i>
@@ -329,7 +364,7 @@
             <button data-nombre="camara-nikon" class="comprar">Comprar</button>
           </div>
         </article>
-        <article class="tarjeta" data-nombre="notebook-asus" data-rating="3" data-precio="125999"
+        <article id="tarjeta-producto" class="tarjeta" data-nombre="notebook-asus" data-rating="3" data-precio="125999"
           data-categoria="notebook">
           <div class="div-foto">
             <img class="producto" src="img/objeto4.png" alt="" />
@@ -337,6 +372,11 @@
           <div class="div-especificaciones">
             <h3 class="titulo-producto">Notebook Asus</h3>
             <p class="precio-producto">$125999</p>
+            <p id="descripcion-producto-vista-lista" class="vista-normal"> Lorem ipsum dolor sit amet consectetur
+              adipisicing
+              elit.
+              Quia et iste natus? Aliquam provident aspernatur eius commodi
+              et quis sapiente tenetur illo laborum ex maiores, illum officiis vero vitae quasi! </p>
             <span class="rating-producto">
               <i class="fas fa-star"></i>
               <i class="fas fa-star"></i>
@@ -347,7 +387,7 @@
             <button data-nombre="notebook-asus" class="comprar">Comprar</button>
           </div>
         </article>
-        <article class="tarjeta" data-nombre="notebook-msi" data-rating="5" data-precio="215099"
+        <article id="tarjeta-producto" class="tarjeta" data-nombre="notebook-msi" data-rating="5" data-precio="215099"
           data-categoria="notebook">
           <div class="div-foto">
             <img class="producto" src="img/objeto-7.png" alt="notebook msi" />
@@ -355,6 +395,11 @@
           <div class="div-especificaciones">
             <h3 class="titulo-producto">Notebook Msi</h3>
             <p class="precio-producto">$215099</p>
+            <p id="descripcion-producto-vista-lista" class="vista-normal"> Lorem ipsum dolor sit amet consectetur
+              adipisicing
+              elit.
+              Quia et iste natus? Aliquam provident aspernatur eius commodi
+              et quis sapiente tenetur illo laborum ex maiores, illum officiis vero vitae quasi! </p>
             <span class="rating-producto">
               <i class="fas fa-star"></i>
               <i class="fas fa-star"></i>
@@ -365,14 +410,19 @@
             <button data-nombre="notebook-msi" class="comprar">Comprar</button>
           </div>
         </article>
-        <article class="tarjeta" data-nombre="auriculares-philips" data-rating="5" data-precio="2159"
-          data-categoria="accesorios">
+        <article id="tarjeta-producto" class="tarjeta" data-nombre="auriculares-philips" data-rating="5"
+          data-precio="2159" data-categoria="accesorios">
           <div class="div-foto">
             <img class="producto" src="img/objeto8.png" alt="auriculares philips" />
           </div>
           <div class="div-especificaciones">
             <h3 class="titulo-producto">Auriculares Philips</h3>
             <p class="precio-producto">$2159</p>
+            <p id="descripcion-producto-vista-lista" class="vista-normal"> Lorem ipsum dolor sit amet consectetur
+              adipisicing
+              elit.
+              Quia et iste natus? Aliquam provident aspernatur eius commodi
+              et quis sapiente tenetur illo laborum ex maiores, illum officiis vero vitae quasi! </p>
             <span class="rating-producto">
               <i class="fas fa-star"></i>
               <i class="fas fa-star"></i>
@@ -383,13 +433,19 @@
             <button data-nombre="auriculares-philips" class="comprar">Comprar</button>
           </div>
         </article>
-        <article class="tarjeta" data-nombre="macbook" data-rating="5" data-precio="249000" data-categoria="notebook">
+        <article id="tarjeta-producto" class="tarjeta" data-nombre="macbook" data-rating="5" data-precio="249000"
+          data-categoria="notebook">
           <div class="div-foto">
             <img class="producto" src="img/objeto9.png" alt="macbook" />
           </div>
           <div class="div-especificaciones">
             <h3 class="titulo-producto">Macbook</h3>
             <p class="precio-producto">$249000</p>
+            <p id="descripcion-producto-vista-lista" class="vista-normal"> Lorem ipsum dolor sit amet consectetur
+              adipisicing
+              elit.
+              Quia et iste natus? Aliquam provident aspernatur eius commodi
+              et quis sapiente tenetur illo laborum ex maiores, illum officiis vero vitae quasi! </p>
             <span class="rating-producto">
               <i class="fas fa-star"></i>
               <i class="fas fa-star"></i>
@@ -400,13 +456,19 @@
             <button data-nombre="macbook" class="comprar">Comprar</button>
           </div>
         </article>
-        <article class="tarjeta" data-nombre="iphone" data-rating="5" data-precio="75000" data-categoria="celulares">
+        <article id="tarjeta-producto" class="tarjeta" data-nombre="iphone" data-rating="5" data-precio="75000"
+          data-categoria="celulares">
           <div class="div-foto">
             <img class="producto" src="img/objeto10.jpeg" alt="iphone" />
           </div>
           <div class="div-especificaciones">
             <h3 class="titulo-producto">Iphone</h3>
             <p class="precio-producto">$75000</p>
+            <p id="descripcion-producto-vista-lista" class="vista-normal"> Lorem ipsum dolor sit amet consectetur
+              adipisicing
+              elit.
+              Quia et iste natus? Aliquam provident aspernatur eius commodi
+              et quis sapiente tenetur illo laborum ex maiores, illum officiis vero vitae quasi! </p>
             <span class="rating-producto">
               <i class="fas fa-star"></i>
               <i class="fas fa-star"></i>
@@ -417,13 +479,19 @@
             <button data-nombre="iphone" class="comprar">Comprar</button>
           </div>
         </article>
-        <article class="tarjeta" data-nombre="xbox-one" data-rating="4" data-precio="95000" data-categoria="consolas">
+        <article id="tarjeta-producto" class="tarjeta" data-nombre="xbox-one" data-rating="4" data-precio="95000"
+          data-categoria="consolas">
           <div class="div-foto">
             <img class="producto" src="img/objeto11.jpg" alt="xbox one" />
           </div>
           <div class="div-especificaciones">
             <h3 class="titulo-producto">Xbox One</h3>
             <p class="precio-producto">$95000</p>
+            <p id="descripcion-producto-vista-lista" class="vista-normal"> Lorem ipsum dolor sit amet consectetur
+              adipisicing
+              elit.
+              Quia et iste natus? Aliquam provident aspernatur eius commodi
+              et quis sapiente tenetur illo laborum ex maiores, illum officiis vero vitae quasi! </p>
             <span class="rating-producto">
               <i class="fas fa-star"></i>
               <i class="fas fa-star"></i>
@@ -434,7 +502,7 @@
             <button data-nombre="xbox-one" class="comprar">Comprar</button>
           </div>
         </article>
-        <article class="tarjeta" data-nombre="mouse-gamer" data-rating="4" data-precio="900"
+        <article id="tarjeta-producto" class="tarjeta" data-nombre="mouse-gamer" data-rating="4" data-precio="900"
           data-categoria="accesorios">
           <div class="div-foto">
             <img class="producto" src="img/objeto12.jpg" alt="mouse gamer" />
@@ -442,6 +510,11 @@
           <div class="div-especificaciones">
             <h3 class="titulo-producto">Mouse Gamer</h3>
             <p class="precio-producto">$900</p>
+            <p id="descripcion-producto-vista-lista" class="vista-normal"> Lorem ipsum dolor sit amet consectetur
+              adipisicing
+              elit.
+              Quia et iste natus? Aliquam provident aspernatur eius commodi
+              et quis sapiente tenetur illo laborum ex maiores, illum officiis vero vitae quasi! </p>
             <span class="rating-producto">
               <i class="fas fa-star"></i>
               <i class="fas fa-star"></i>

@@ -29,6 +29,25 @@ botonCerrarCarrito.onclick = () => {
   asideCarrito.classList.add("hidden");
 };
 
+//empieza vaciar carrito aside
+
+const vaciarCarrito = document.querySelector("#vaciar-carrito");
+const cancelarVaciarCarrito = document.querySelector(
+  ".boton-cancelar-vaciar-carrito"
+);
+const vaciarCarritoSection = document.querySelector(".vaciar-carrito-section");
+console.log(vaciarCarrito);
+console.log(cancelarVaciarCarrito);
+console.log(vaciarCarritoSection);
+
+vaciarCarrito.onclick = () => {
+  vaciarCarritoSection.classList.remove("hidden");
+};
+cancelarVaciarCarrito.onclick = () => {
+  vaciarCarritoSection.classList.add("hidden");
+};
+// termina aca vaciar carrito aside SIN BORRAR PRODUCTOS
+
 // LISTO FILTRO DE BUSQUEDA
 const tarjetas = document.getElementsByClassName("tarjeta");
 const filtroRating = document.getElementsByClassName("check");

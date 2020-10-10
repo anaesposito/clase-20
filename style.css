@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;700;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Cookie&display=swap");
-/*..............................Generales...................*/
+/*...............................................Generales....................................*/
 * {
   margin: 0;
   box-sizing: border-box;
@@ -37,7 +37,7 @@ p {
 .ocultar {
   display: none;
 }
-/*.......................Barra de Navegacion.............................*/
+/*........................................Barra de Navegacion.................................*/
 
 .container-header-logo {
   display: flex;
@@ -72,7 +72,7 @@ p {
   padding: 15px;
 }
 
-/* ....................................Header Background Foto........................... */
+/* .......................................Header Background Foto............................. */
 
 .background-foto {
   width: 100%;
@@ -97,7 +97,7 @@ p {
   z-index: 1;
 }
 
-/*.......................................... Carrito Overlay.......................................*/
+/*....................................... Carrito Overlay.....................................*/
 
 #cerrar-carrito {
   background: white;
@@ -170,6 +170,44 @@ p {
 }
 .hidden {
   transform: translateX(2000px);
+}
+
+/* ...................................Vaciar Carrito......................................... */
+.vaciar-carrito-section {
+  width: 100%;
+  background-color: #fff;
+  padding: 40px 30px;
+  max-width: 500px;
+  position: fixed;
+  top: 50%;
+  right: 50%;
+  z-index: 5;
+}
+.vaciar-carrito-section > h1 {
+  text-align: center;
+  font-size: 30px;
+  font-weight: 700;
+  margin-top: 20px;
+}
+
+.botones-vaciar-carrito-footer > button {
+  margin-top: 40px;
+  margin-left: 20px;
+  width: 200px;
+  min-height: 50px;
+  border-radius: 5px;
+}
+
+.botones-vaciar-carrito-footer {
+  padding: 40px 10px 30px;
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+}
+
+.boton-vaciar-carrito-confirmacion {
+  background-color: red;
+  color: white;
 }
 /* ...................................Checkout Carrito....................................... */
 
@@ -292,19 +330,19 @@ p {
   justify-content: flex-end;
   margin: 40px 0 60px;
 }
-/*.......................................Seccion Principal...............................*/
+/*............................................Seccion Principal...............................*/
 .main {
   display: flex;
   justify-content: center;
   padding: 0 200px;
 }
 
-/*.......................................Filtros de Busqueda.............................*/
+/*............................................Filtros de Busqueda.............................*/
 .filtros {
   display: flex;
   flex-direction: column;
   margin: 6% 1% 1% 0%;
-  width: 70%;
+  width: 60%;
 }
 .encabezado-filtros {
   display: flex;
@@ -347,7 +385,7 @@ p {
   top: 10%;
 }
 
-/* .............................. Categoria de Productos ..............................*/
+/* ................................... Categoria de Productos ................................*/
 .categoria {
   display: flex;
   flex-direction: column;
@@ -367,12 +405,12 @@ p {
   margin-right: 10px;
 }
 
-/* ......................................Puntaje de Productos .....................*/
+/* .............................................Puntaje de Productos .........................*/
 .contenedor-filtro-puntaje {
   display: flex;
   flex-direction: column;
 }
-/*.......................................Seccion Productos.........................*/
+/*................................................Seccion Productos...........................*/
 .header-tarjetas {
   background: #fff;
   display: flex;
@@ -402,13 +440,21 @@ p {
   align-content: center;
   flex-wrap: wrap;
 }
-
+#vista-grilla,
+#vista-lista {
+  background-color: transparent;
+}
 .ver-como,
 .fa-th,
 .fa-list-ul {
-  padding: 15px;
+  padding: 3%;
 }
-
+.ver-como {
+  font-weight: regular;
+}
+.vista-normal {
+  display: none;
+}
 .seccion-tarjetas {
   display: flex;
   flex-direction: column;
@@ -420,26 +466,33 @@ p {
 }
 
 .tarjeta {
-  width: 31%;
+  width: 380px;
   margin: 1%;
   background-color: white;
-  padding: 70px;
+  padding: 25px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
+.tarjeta:hover {
+  box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0);
+  transition: box-shadow 0.5s;
+}
 
 .producto {
-  width: 100%;
+  max-width: 100%;
+  height: 100%;
+  padding: 0 20px 0;
   transition: 1s;
 }
 .div-foto {
-  width: 300px;
-  height: 300px;
+  height: 250px;
   overflow: hidden;
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
 
 .producto:hover {
@@ -487,7 +540,24 @@ p {
   color: rgb(255, 208, 0);
 }
 
-/* Aca comienza footer Main */
+/*..................................... Aca comienza Vista Lista .............................*/
+
+.ajustes-tarjeta {
+  width: 96%;
+  margin: 1%;
+  background-color: white;
+  padding: 25px;
+  display: flex;
+
+  flex-direction: row;
+}
+
+.ajustes-especificaciones {
+  text-align: justify;
+  margin-left: 50px;
+}
+
+/*..................................... Aca comienza footer Main .............................*/
 .main-footer {
   display: flex;
   flex-direction: column;

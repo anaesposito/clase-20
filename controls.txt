@@ -14,6 +14,9 @@
 ////////////////////// P R O B L E M A S //////////
 
 -Imagenes de producto no se achican
+-resolver el overlay <div class="overlay ocultar"></div>
+
+-CARRITO ASIDE SIN BORRAR PRODUCTOS
 
 
 
