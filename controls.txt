@@ -6,7 +6,7 @@
 ///3- CAMBIAR NOMBRE DIV-ESPECIFICACIONES a los productos en main
 ------4 - fijarme q las imagenes se adapten al tamaño
 -----5-fijate q male mando los tamaños de responsive
-------6 Normalizar texto de entrada en los filtros de input
+------6 Normalizar texto de entrada en los filtros de input -- OK BUSQUEDA
 -----7/ envio de formularios
 ////////8 FUNCIONES CHICAS QUE REUTILICE
 

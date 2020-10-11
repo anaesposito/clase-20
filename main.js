@@ -3,12 +3,15 @@
 //...........Inicio Boton Limpiar Filtros...................//
 const limpiar = document.querySelector("#limpiar");
 const checkboxes = document.querySelectorAll("input[type='checkbox']");
-const filtroNombre = document.querySelector("#busqueda");
+const busqueda = document.querySelector(".busqueda");
 const numeroQueMuestra = document.querySelector(".nro-mostrado");
 const totalNumerosMostrados = document.querySelector(".total-nros");
 
 limpiar.onclick = () => {
   busqueda.value = "";
+  for (let tarjeta of tarjetas) {
+    tarjeta.classList.remove("ocultar");
+  }
   for (let checkbox of checkboxes) {
     checkbox.checked = false;
   }
@@ -18,10 +21,10 @@ limpiar.onclick = () => {
 //.................Inicio Filtro Busqueda...................//
 const tarjetas = document.querySelectorAll(".tarjeta");
 
-busqueda.oninput = () => {
+const filtrarBusqueda = (busqueda.oninput = () => {
   for (let tarjeta of tarjetas) {
     let titulo = tarjeta.dataset.nombre;
-    let consulta = busqueda.value;
+    let consulta = busqueda.value.toLowerCase();
 
     if (titulo.includes(consulta)) {
       tarjeta.classList.remove("ocultar");
@@ -32,7 +35,8 @@ busqueda.oninput = () => {
       tarjeta.classList.remove("ocultar");
     }
   }
-};
+});
+
 //....................Fin Filtro Busqueda...................//
 
 //.................Inicio Filtro Categoria..................//
@@ -116,7 +120,83 @@ const coincidePuntaje = (tarjeta) => {
   }
 };
 
-//.................Fin Filtro checkboxes.....................//
+//.................Fin Filtro checkboxes....................//
+//.................Inicio Filtros Simultaneos...............//
+const hayBusqueda = () => {
+  if (busqueda.value) {
+    return true;
+  } else {
+    return false;
+  }
+};
+const pasaFiltroBusqueda = (tarjeta) => {
+  if (hayBusqueda()) {
+    if (filtrarBusqueda(tarjeta)) {
+      return true;
+    } else {
+      return false;
+    }
+  } else {
+    return true;
+  }
+};
+
+const hayCategoria = () => {
+  for (let checkboxCategoria of checkboxesCategoria) {
+    if (checkboxCategoria.checked) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+};
+const pasaFiltroCategoria = (tarjeta) => {
+  if (hayCategoria()) {
+    if (filtrarPorCheckboxesCategoria(tarjeta)) {
+      return true;
+    } else {
+      return false;
+    }
+  } else {
+    return true;
+  }
+};
+
+const hayPuntaje = () => {
+  for (let checkboxPuntaje of checkboxesPuntaje) {
+    if (checkboxPuntaje.checked) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+};
+
+const pasaFiltroPuntaje = (tarjeta) => {
+  if (hayPuntaje()) {
+    if (filtrarPorCheckboxesPuntaje(tarjeta)) {
+      return true;
+    } else {
+      return false;
+    }
+  } else {
+    return true;
+  }
+};
+
+const pasaFiltros = (tarjeta) => {
+  if (
+    pasaFiltroBusqueda(tarjeta) &&
+    pasaFiltroCategoria(tarjeta) &&
+    pasaFiltroPuntaje(tarjeta)
+  ) {
+    return true;
+  } else {
+    return false;
+  }
+};
+
+//.................Fin Filtros Simultaneos..................//
 
 //..............Inicia Ver Como............................//
 
@@ -193,9 +273,6 @@ const cancelarVaciarCarrito = document.querySelector(
   ".boton-cancelar-vaciar-carrito"
 );
 const vaciarCarritoSection = document.querySelector(".vaciar-carrito-section");
-console.log(vaciarCarrito);
-console.log(cancelarVaciarCarrito);
-console.log(vaciarCarritoSection);
 
 vaciarCarrito.onclick = () => {
   vaciarCarritoSection.classList.remove("hidden");
@@ -231,3 +308,83 @@ botonSeguirComprandoCheckout.onclick = () => {
   carritoCheckout.classList.add("ocultar-checkout");
   overlay.classList.remove("overlay-aumentado");
 };
+
+//..................Inicio Funciones Checkout.............//
+
+const efectivo = document.querySelectorAll("input[value='efectivo-debito']");
+const credito = document.querySelector("input[value='tarjeta-credito']");
+const envioOpcion = document.querySelector("input[name='envio']");
+const tarjetaDescuento = document.querySelector("input[name='descuento']");
+let subtotal = document.querySelector(".subtotal-checkout-importe");
+const recargo = document.querySelector(".recargo-checkout-importe");
+const renglonEnvio = document.querySelector(".envio-checkout");
+const renglonRecargo = document.querySelector(".recargo-checkout");
+const renglonDescuento = document.querySelector(".descuento-checkout");
+const descuento = document.querySelector(".descuento-checkout-importe");
+const envio = document.querySelector(".envio-checkout-importe");
+const total = document.querySelector(".total-checkout-importe");
+const opcionesDePago = document.querySelectorAll(".metodos-de-pago");
+
+subtotal = 5540;
+subtotal.textContent = 5540;
+
+let subtotalNumero = Number(subtotal);
+console.log(subtotal);
+for (let opcion of opcionesDePago) {
+  opcion.oninput = () => {
+    calcularTotal();
+  };
+}
+let resultadoRecargo;
+
+const recargoTarjeta = () => {
+  if (credito.checked) {
+    resultadoRecargo = subtotalNumero * 0.1;
+    console.log(resultadoRecargo);
+    recargo.textContent = resultadoRecargo;
+    renglonRecargo.classList.remove("ocultar");
+  } else {
+    resultadoRecargo = 0;
+    renglonRecargo.classList.add("ocultar");
+  }
+  return resultadoRecargo;
+};
+
+let resultadoDescuento;
+
+const aplicarDescuento = () => {
+  if (tarjetaDescuento.checked) {
+    resultadoDescuento = -subtotalNumero * 0.05;
+    descuento.textContent = resultadoDescuento;
+    renglonDescuento.classList.remove("ocultar");
+  } else {
+    resultadoDescuento = 0;
+    renglonDescuento.classList.add("ocultar");
+  }
+  return resultadoDescuento;
+};
+
+let resultadoEnvio;
+
+const recargoEnvio = () => {
+  if (envioOpcion.checked) {
+    resultadoEnvio = 300;
+    envio.textContent = resultadoEnvio;
+    renglonEnvio.classList.remove("ocultar");
+  } else {
+    resultadoEnvio = 0;
+    renglonEnvio.classList.add("ocultar");
+  }
+  return resultadoEnvio;
+};
+
+const calcularTotal = () => {
+  let totalReal = subtotalNumero;
+  totalReal =
+    subtotalNumero + recargoEnvio() + aplicarDescuento() + recargoTarjeta();
+  total.textContent = totalReal;
+  return totalReal;
+};
+
+// falta vincular al total de carrito sumado
+//..................Fin Funciones Checkout.............//
