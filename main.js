@@ -249,42 +249,54 @@ botonVistaGrilla.onclick = () => {
 
 //...............Inicio Ocultar Carrito Aside...............//
 //..................Inicio Agregar al Carrito Funciones.............//
-//////////////////////////////PRUEBA/////////////////////////////
-const botonesAgregarAlCarrito = document.querySelectorAll(".comprar");
+
+const botonesComprarProducto = document.querySelectorAll(".comprar");
 const contenidoCarrito = document.querySelector(".contenido-carrito");
-const productosAgregados = document.querySelectorAll(".producto-agregado");
+const tarjetasCarrito = document.querySelectorAll(".tarjeta-carrito");
+console.log(tarjetasCarrito);
+const agregarProductos = () => {
+  for (let botonComprarProducto of botonesComprarProducto) {
+    botonComprarProducto.onclick = () => {
+      botonComprarProducto.classList.add("producto-agregado");
+    };
+  }
+};
 
-// const agregarProductos = () => {
-for (let botonAgregar of botonesAgregarAlCarrito) {
-  botonAgregar.onclick = () => {
-    botonAgregar.classList.add("producto-agregado");
-  };
-}
-// };
+const coincideBotonConTarjeta = () => {
+  for (let botonComprarProducto of botonesComprarProducto) {
+    for (let tarjetaCarrito of tarjetasCarrito) {
+      if (
+        botonComprarProducto.dataset.nombre == tarjetaCarrito.dataset.nombre
+      ) {
+        tarjetaCarrito.classList.remove("ocultar");
+      }
+    }
+  }
+};
 
-// const contarProductosCarrito = () => {
-
-// };
-
-//////////////////////////////////////////////////////////////////////////////////////
 const clickCarrito = document.querySelector("#click-carrito");
 const botonCerrarCarrito = document.querySelector("#cerrar-carrito");
 const asideCarrito = document.querySelector("#carrito");
 const overlay = document.querySelector(".overlay");
+const body = document.querySelector("body");
 
 const mostrarCarritoAside = () => {
   asideCarrito.classList.remove("hidden");
   overlay.classList.remove("ocultar");
+  body.classList.add("overflow");
 };
 
 clickCarrito.onclick = () => {
   mostrarCarritoAside();
-  console.log(productosAgregados);
-  if (document.querySelectorAll(".producto-agregado").length === 0) {
+  agregarProductos();
+  const productosAgregados = document.querySelectorAll(".producto-agregado");
+  coincideBotonConTarjeta();
+
+  if (productosAgregados.length === 0) {
     contenidoCarrito.textContent =
       "No tienes productos en el carrito, ¡agrega algunos!";
   } else {
-    contenidoCarrito.textContent = "si hay productos";
+    coincideBotonConTarjeta();
   }
 };
 

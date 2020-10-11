@@ -41,6 +41,31 @@
     <div class="cuerpo-carrito">
       <p><span>0</span>producto(s) agregados(s)</p>
       <div class="contenido-carrito"></div>
+      <div class="productos-agregados-carrito">
+
+        <article class="tarjeta-carrito ocultar" data-nombre="auriculares-sony" data-precio="2355">
+
+          <div class="producto-en-carrito-miniatura ">
+            <img src="img/objeto5.png" alt="">
+          </div>
+
+          <div class="contenedor-especificaciones-miniatura">
+            <div class="especifiaciones-titulo-miniatura">
+              <h3>Auriculares Sony</h3>
+              <button id="trash" class="button"><i class="fas fa-trash"></i></button>
+            </div>
+            <div class="especificaciones-precio-input-miniatura">
+              <label>
+                <input class="input-cantidad-carrito" name="cantidad-unidades" min="0" value="1" type="number">
+                Unidades
+              </label>
+              <p>Precio $2355</p>
+            </div>
+          </div>
+        </article>
+
+
+      </div>
       <p>Subtotal</p>
     </div>
     <footer class="contenedor-botones-carrito">
@@ -79,34 +104,34 @@
           <div class="contenedor-columnas">
             <div class="contenedor-datos-personales">
               <h5 class="titulo-datos-personales-checkout">Datos Personales</h5>
-              <label class="datos-personales" for="">
+              <label class="datos-personales" for="nombre-apellido">
                 Nombre y Apellido
-                <input class="campos-datos-personales" type="text" placeholder="Ingrese su nombre aquí"
-                  name="Nombre y Apellido" />
+                <input class="campos-datos-personales" id="nombre-apellido" type="text"
+                  placeholder="Ingrese su nombre aquí" name="Nombre y Apellido" />
               </label>
-              <label class="datos-personales" for="">
+              <label class="datos-personales" for="email">
                 Email
-                <input class="campos-datos-personales" type="email" placeholder="Ingrese su Email"
+                <input class="campos-datos-personales" id="email" type="email" placeholder="Ingrese su Email"
                   name="Direccion de Email" id="" />
               </label>
             </div>
 
             <div class="contenedor-metodos-de-pago">
               <h5 class="titulo-opciones-de-pago-checkout">Opciones de Pago</h5>
-              <label class="metodos-de-pago" for="">
-                <input type="radio" name="metodo-de-pago" value="efectivo-debito" />
+              <label class="metodos-de-pago" for="efectivo-debito">
+                <input type="radio" name="metodo-de-pago" id="efectivo-debito" value="efectivo-debito" />
                 Efectivo/Debito
               </label>
-              <label class="metodos-de-pago" for="">
-                <input type="radio" name="metodo-de-pago" value="tarjeta-credito" />
+              <label class="metodos-de-pago" for="credito">
+                <input type="radio" name="metodo-de-pago" id="credito" value="tarjeta-credito" />
                 Tarjeta de Credito
               </label>
-              <label class="metodos-de-pago" for="">
-                <input type="checkbox" name="envio" />
+              <label class="metodos-de-pago" for="envio">
+                <input type="checkbox" id="envio" name="envio" />
                 Lo quiero con Envio
               </label>
-              <label class="metodos-de-pago" for="">
-                <input type="checkbox" name="descuento" />
+              <label class="metodos-de-pago" for="descuento">
+                <input type="checkbox" id="descuento" name="descuento" />
                 Tarjeta de Descuento
               </label>
             </div>
@@ -157,7 +182,7 @@
       </div>
       <div class="container-busqueda">
         <h3>Búsqueda</h3>
-        <label class="contenedor-input-busqueda" for="" aria-label="Búsqueda">
+        <label class="contenedor-input-busqueda" for="busqueda" aria-label="Búsqueda">
           <input placeholder="Ingresa tu búsqueda" id="busqueda" class="busqueda" type="text">
           <i class="fas fa-search"></i>
         </label>
@@ -168,19 +193,19 @@
       <div class="categoria">
         <h3>Categoria</h3>
         <form class="form-filtros" action="">
-          <label class="nombre-categorias" for="Consolas"> <input type="checkbox" name="consolas" id="consolasId"
+          <label class="nombre-categorias" for="consolas"> <input type="checkbox" name="consolas" id="consolas"
               class="check-filtro-categoria" /> Consolas
           </label>
-          <label class="nombre-categorias" for="Notebooks"> <input type="checkbox" name="notebook"
+          <label class="nombre-categorias" for="notebooks"> <input type="checkbox" name="notebook" id="notebooks"
               class="check-filtro-categoria" />
             Notebooks</label>
-          <label class="nombre-categorias" for="Camaras"> <input type="checkbox" name="camaras"
+          <label class="nombre-categorias" for="camaras"> <input type="checkbox" name="camaras" id="camaras"
               class="check-filtro-categoria" />
             Camaras</label>
-          <label class="nombre-categorias" for="Celulares"> <input type="checkbox" name="celulares"
+          <label class="nombre-categorias" for="celulares"> <input type="checkbox" id="celulares" name="celulares"
               class="check-filtro-categoria" />
             Celulares</label>
-          <label class="nombre-categorias" for="Accesorios"> <input type="checkbox" name="accesorios"
+          <label class="nombre-categorias" for="accesorios"> <input type="checkbox" name="accesorios" id="accesorios"
               class="check-filtro-categoria" />
             Accesorios</label>
       </div>

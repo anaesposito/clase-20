@@ -95,7 +95,7 @@ p {
   z-index: 1;
 }
 
-/*....................................... Carrito Overlay.....................................*/
+/*....................................... Carrito Aside.....................................*/
 
 #cerrar-carrito {
   background: white;
@@ -173,6 +173,60 @@ p {
 .overlay-aumentado {
   z-index: 3;
 }
+.overflow {
+  overflow-y: hidden;
+}
+
+/* ...................................Inicio Productos en Carrito......................................... */
+.cuerpo-carrito > p {
+  margin-bottom: 10%;
+}
+.productos-agregados-carrito {
+  flex-grow: 1;
+  overflow: scroll;
+}
+
+.tarjeta-carrito {
+  display: flex;
+  margin: 10% 0 10%;
+}
+.contenedor-especificaciones-miniatura {
+  flex-grow: 1;
+  padding: 5px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.fa-trash {
+  color: red;
+}
+#trash {
+  background-color: transparent;
+}
+
+.especifiaciones-titulo-miniatura {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 80%;
+}
+.especificaciones-precio-input-miniatura {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.producto-en-carrito-miniatura {
+  width: 30%;
+}
+.producto-en-carrito-miniatura > img {
+  width: 100%;
+}
+.input-cantidad-carrito {
+  width: 20%;
+  text-align: center;
+}
+
 /* ...................................Vaciar Carrito......................................... */
 .vaciar-carrito-section {
   width: 100%;
@@ -215,8 +269,8 @@ p {
 .checkout {
   transform: translateY(0);
   min-width: 800px;
-  top: 120px;
-  right: 650px;
+  top: 25%;
+  right: 25%;
   position: fixed;
   background-color: white;
   transition: 2s;
@@ -242,7 +296,7 @@ p {
   width: 70%;
 }
 .ocultar-checkout {
-  transform: translateY(-1000px);
+  transform: translateY(-2000px);
 }
 
 .titulo-checkout > h1 {
