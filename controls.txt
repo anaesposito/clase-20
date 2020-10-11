@@ -1,10 +1,8 @@
 //////////////////////////// CONTROLES /////////////////////
 
-
-////1- Controlar formato de formularios, labels, checks, radios,etc
 ////2-le agregas la clase producto agregado y despues un for con los q tengan la clase agreado para carrito producto agregado
-///3- CAMBIAR NOMBRE DIV-ESPECIFICACIONES a los productos en main
-------4 - fijarme q las imagenes se adapten al tamaño
+
+
 -----5-fijate q male mando los tamaños de responsive
 ------6 Normalizar texto de entrada en los filtros de input -- OK BUSQUEDA
 -----7/ envio de formularios
@@ -16,11 +14,12 @@
 ////////////////////// P R O B L E M A S //////////
 
 
--resolver el overlay <div class="overlay ocultar"></div>
 
 -CARRITO ASIDE SIN BORRAR PRODUCTOS
 -sombra hover tarjetas
 ---centrar bien el checkout
+
+---- no funciona el scroll en el ASIDE
 
 
 
