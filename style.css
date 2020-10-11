@@ -557,6 +557,12 @@ p {
   margin-left: 50px;
 }
 
+.ajustes-imagen {
+  max-width: 100%;
+
+  padding: 0 20px 0;
+  transition: 1s;
+}
 /*..................................... Aca comienza footer Main .............................*/
 .main-footer {
   display: flex;

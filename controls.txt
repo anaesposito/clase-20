@@ -6,7 +6,7 @@
 ///3- CAMBIAR NOMBRE DIV-ESPECIFICACIONES a los productos en main
 ------4 - fijarme q las imagenes se adapten al tamaño
 -----5-fijate q male mando los tamaños de responsive
-
+------6 Normalizar texto de entrada en los filtros de input
 
 
 
@@ -17,7 +17,8 @@
 -resolver el overlay <div class="overlay ocultar"></div>
 
 -CARRITO ASIDE SIN BORRAR PRODUCTOS
-
+-sombra hover tarjetas
+---centrar bien el checkout
 
 
 

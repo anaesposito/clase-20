@@ -48,6 +48,53 @@ cancelarVaciarCarrito.onclick = () => {
 };
 // termina aca vaciar carrito aside SIN BORRAR PRODUCTOS
 
+// inicia Vista Grilla//
+const tarjetasProducto = document.querySelectorAll(".tarjeta");
+const descripcionProducto = document.querySelectorAll(
+  "#descripcion-producto-vista-lista"
+);
+const especificacionesProducto = document.querySelectorAll(
+  ".div-especificaciones"
+);
+const botonVistaLista = document.querySelector("#vista-lista");
+const botonVistaGrilla = document.querySelector("#vista-grilla");
+const imagenesProductos = document.querySelectorAll(".producto");
+
+botonVistaLista.onclick = () => {
+  for (tarjeta of tarjetasProducto) {
+    tarjeta.classList.remove("tarjeta");
+    tarjeta.classList.add("ajustes-tarjeta");
+  }
+  for (parrafo of descripcionProducto) {
+    parrafo.classList.remove("vista-normal");
+  }
+  for (especificaciones of especificacionesProducto) {
+    especificaciones.classList.add("ajustes-especificaciones");
+  }
+  for (imagen of imagenesProductos) {
+    imagen.classList.remove("producto");
+    imagen.classList.add("ajustes-imagen");
+  }
+};
+
+botonVistaGrilla.onclick = () => {
+  for (tarjeta of tarjetasProducto) {
+    tarjeta.classList.add("tarjeta");
+    tarjeta.classList.remove("ajustes-tarjeta");
+  }
+  for (parrafo of descripcionProducto) {
+    parrafo.classList.add("vista-normal");
+  }
+  for (especificaciones of especificacionesProducto) {
+    especificaciones.classList.remove("ajustes-especificaciones");
+  }
+  for (imagen of imagenesProductos) {
+    imagen.classList.add("producto");
+    imagen.classList.remove("ajustes-imagen");
+  }
+};
+// finaliza vista grilla vista lista//
+
 // LISTO FILTRO DE BUSQUEDA
 const tarjetas = document.getElementsByClassName("tarjeta");
 const filtroRating = document.getElementsByClassName("check");
