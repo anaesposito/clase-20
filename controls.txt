@@ -7,13 +7,15 @@
 ------4 - fijarme q las imagenes se adapten al tamaño
 -----5-fijate q male mando los tamaños de responsive
 ------6 Normalizar texto de entrada en los filtros de input
+-----7/ envio de formularios
+////////8 FUNCIONES CHICAS QUE REUTILICE
 
 
 
 
 ////////////////////// P R O B L E M A S //////////
 
--Imagenes de producto no se achican
+
 -resolver el overlay <div class="overlay ocultar"></div>
 
 -CARRITO ASIDE SIN BORRAR PRODUCTOS

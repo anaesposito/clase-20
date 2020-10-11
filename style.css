@@ -34,9 +34,7 @@ h5 {
 p {
   font-size: 1em;
 }
-.ocultar {
-  display: none;
-}
+
 /*........................................Barra de Navegacion.................................*/
 
 .container-header-logo {
@@ -167,11 +165,14 @@ p {
   background-color: rgba(199, 199, 199, 0.513);
   position: fixed;
   top: 0;
+  z-index: 2;
 }
 .hidden {
   transform: translateX(2000px);
 }
-
+.overlay-aumentado {
+  z-index: 3;
+}
 /* ...................................Vaciar Carrito......................................... */
 .vaciar-carrito-section {
   width: 100%;
@@ -622,4 +623,7 @@ p {
   text-align: center;
   margin-top: 30px;
   margin-bottom: 30px;
+}
+.ocultar {
+  display: none;
 }
