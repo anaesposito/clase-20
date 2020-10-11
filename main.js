@@ -248,15 +248,44 @@ botonVistaGrilla.onclick = () => {
 // ------------------------------------------------------Inicio Carrito Aside ----------------------------------------//
 
 //...............Inicio Ocultar Carrito Aside...............//
+//..................Inicio Agregar al Carrito Funciones.............//
+//////////////////////////////PRUEBA/////////////////////////////
+const botonesAgregarAlCarrito = document.querySelectorAll(".comprar");
+const contenidoCarrito = document.querySelector(".contenido-carrito");
+const productosAgregados = document.querySelectorAll(".producto-agregado");
 
+// const agregarProductos = () => {
+for (let botonAgregar of botonesAgregarAlCarrito) {
+  botonAgregar.onclick = () => {
+    botonAgregar.classList.add("producto-agregado");
+  };
+}
+// };
+
+// const contarProductosCarrito = () => {
+
+// };
+
+//////////////////////////////////////////////////////////////////////////////////////
 const clickCarrito = document.querySelector("#click-carrito");
 const botonCerrarCarrito = document.querySelector("#cerrar-carrito");
 const asideCarrito = document.querySelector("#carrito");
 const overlay = document.querySelector(".overlay");
 
-clickCarrito.onclick = () => {
+const mostrarCarritoAside = () => {
   asideCarrito.classList.remove("hidden");
   overlay.classList.remove("ocultar");
+};
+
+clickCarrito.onclick = () => {
+  mostrarCarritoAside();
+  console.log(productosAgregados);
+  if (document.querySelectorAll(".producto-agregado").length === 0) {
+    contenidoCarrito.textContent =
+      "No tienes productos en el carrito, ¡agrega algunos!";
+  } else {
+    contenidoCarrito.textContent = "si hay productos";
+  }
 };
 
 botonCerrarCarrito.onclick = () => {
@@ -325,11 +354,12 @@ const envio = document.querySelector(".envio-checkout-importe");
 const total = document.querySelector(".total-checkout-importe");
 const opcionesDePago = document.querySelectorAll(".metodos-de-pago");
 
+// el problema esta en la declaracion de subtotal que no reflej en el textcontent del carrito
 subtotal = 5540;
 subtotal.textContent = 5540;
 
 let subtotalNumero = Number(subtotal);
-console.log(subtotal);
+
 for (let opcion of opcionesDePago) {
   opcion.oninput = () => {
     calcularTotal();
