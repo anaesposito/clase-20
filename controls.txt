@@ -8,6 +8,9 @@
 -----7/ envio de formularios
 ////////8 FUNCIONES CHICAS QUE REUTILICE
 
+9-------accesibilidad con set attribute para el arial hidden
+
+
 
 
 
